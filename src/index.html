@@ -7,29 +7,32 @@
     <meta name="title" content="XXX YYY" />
     <meta name="description" content="XXX YYY" />
     <title>XXX YYY</title>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Rozha+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
 
     <!-- Header with navigation menu -->
-    <header>
+    <header class="heading">
         <div class="heading__logo" id="heading__logo">TU POWINNO BYĆ LOGO</div>
-        <nav class="heading__navigation">
-            <ul>
-                <li class="heading__navigation__aboutme"><a href="#about_me">O MNIE</a></li>
-                <li class="heading__navigation__gallery"><a href="#gallery">PROJEKTY</a></li>
-                <li class="heading__navigation__contact"><a href="#contact">NAPISZ DO MNIE!</a></li>
+        <nav>
+            <ul class="heading__navigation">
+                <li class="heading__navigation__aboutme"><a class="heading__navigation__link" href="#about_me">O MNIE</a></li>
+                <li class="heading__navigation__gallery"><a class="heading__navigation__link" href="#gallery">PROJEKTY</a></li>
+                <li class="heading__navigation__contact"><a class="heading__navigation__link" href="#contact">NAPISZ DO MNIE!</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- About me section -->
     <section class="about_me" id="about_me">
-        <h1 class="about_me__heading">Hi! My name is XXX.</h1>
-        <h2 class="about_me__subheading">I am an architect.</h2>
-        <p class="about_me__paragraph">Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff mace skywalker windu yavin. Zabrak palpatine mon kenobi darth mothma skywalker dantooine. Wicket solo solo bespin hoth antilles solo. Han lars ben organa. Utapau tatooine yoda luke solo anakin. Skywalker wicket leia maul padmé kamino ventress jawa solo. Calrissian mothma calamari fett ewok ponda binks jabba dagobah. </p>
+        <section class="about_me__text">
+            <h1 class="about_me__text__heading">Hi! My name is XXX.</h1>
+            <h2 class="about_me__text__subheading">I am an architect.</h2>
+            <p class="about_me__text__paragraph">Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff mace skywalker windu yavin. Zabrak palpatine mon kenobi darth mothma skywalker dantooine. Wicket solo solo bespin hoth antilles solo. Han lars ben organa. Utapau tatooine yoda luke solo anakin. Skywalker wicket leia maul padmé kamino ventress jawa solo. Calrissian mothma calamari fett ewok ponda binks jabba dagobah. </p>
+        </section>
         <div class="about_me__image"></div>
     </section>
 
