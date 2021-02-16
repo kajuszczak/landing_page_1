@@ -71,6 +71,9 @@ a:active {
   text-decoration: none;
   font-family: "Montserrat";
   color: #000;
+  display: block;
+  text-align: center;
+  min-width: 145px;
 }
 
 .about_me {
