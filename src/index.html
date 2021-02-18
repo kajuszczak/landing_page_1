@@ -16,7 +16,9 @@
 
     <!-- Header with navigation menu -->
     <header class="heading">
-        <div class="heading__logo" id="heading__logo">TU POWINNO BYĆ LOGO</div>
+        <div class="heading__logo" id="heading__logo">
+            
+        </div>
         <nav>
             <ul class="heading__navigation">
                 <li class="heading__navigation__aboutme"><a class="heading__navigation__link" href="#about_me">O MNIE</a></li>
@@ -35,10 +37,10 @@
         </section>
         <section class="about_me__image">
 
-            <picture class="compare-sideboards__picture">
-                <source srcset="/assets/images/portrait.webp" type="image/webp">
-                <source srcset="/assets/images/portrait.jpg" type="image/jpeg">
-                <img class="" srcset="/assets/images/portrait.jpg">
+            <picture class="">
+                <source srcset="./img/portrait_s.webp" type="image/webp">
+                <source srcset="./img/portrait_s.jpg" type="image/jpeg">
+                <img class="about_me__image__photo" srcset="./img/portrait_s.jpg">
             </picture>
 
         </section>
@@ -50,70 +52,91 @@
 
                 <li class="gallery__slider__element">
                     <!-- Correct image -->
-                    <section class="gallery__slider__element__1">
+
+                    <section class="gallery__slider__element__1" id="gallery__slider__element__1">
                         <section class="gallery__slider__element__text">
                             <h3 class="gallery__slider__element__text__title">Han lars ben organa </h3>
                             <h4 class="gallery__slider__element__text__project_type">Han lars ben</h4>
                             <p class="gallery__slider__element__text__description">Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff mace skywalker windu yavin. Zabrak palpatine mon kenobi darth mothma skywalker dantooine. Wicket solo solo bespin hoth antilles.</p>
                         </section>
-                        <img class="gallery__slider__element__photo" src="/assets/images/architecture1.jpg" alt="project of sports centre">
+                        <section>
+                            <picture>
+                                <source srcset="./img/architecture1_s.webp" type="image/webp">
+                                <source srcset="./img/architecture1_s.jpg" type="image/jpeg">
+                                <img class="gallery__slider__element__photo" srcset="./img/architecture1_s.jpg">
+                            </picture>
+                        </section>
                     </section>
                 </li>
 
                 <li class="gallery__slider__element">
                     <!-- Correct image -->
-                    <section class="gallery__slider__element__2">
+                    <section class="gallery__slider__element__2" id="gallery__slider__element__2">
                         <section class="gallery__slider__element__text">
                             <h3 class="gallery__slider__element__text__title">Han lars ben organa 2</h3>
                             <h4 class="gallery__slider__element__text__project_type">Han lars ben 2</h4>
                             <p class="gallery__slider__element__text__description">Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff mace skywalker windu yavin. Zabrak palpatine mon kenobi darth mothma skywalker dantooine. Wicket solo solo bespin hoth antilles.</p>
                         </section>
-                        <img class="gallery__slider__element__photo" src="/assets/images/architecture2.jpg" alt="project of urban square area development project">
+                        <picture>
+                            <source srcset="./img/architecture2_s.webp" type="image/webp">
+                            <source srcset="./img/architecture2_s.jpg" type="image/jpeg">
+                            <img class="gallery__slider__element__photo" srcset="./img/architecture2_s.jpg">
+                        </picture>
                     </section>
                 </li>
 
                 <li class="gallery__slider__element">
                     <!-- Correct image -->
-                    <section class="gallery__slider__element__3">
+                    <section class="gallery__slider__element__3" id="gallery__slider__element__3">
                         <section class="gallery__slider__element__text">
                             <h3 class="gallery__slider__element__text__title">Han lars ben organa </h3>
                             <h4 class="gallery__slider__element__text__project_type">Han lars ben</h4>
                             <p class="gallery__slider__element__text__description">Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff mace skywalker windu yavin. Zabrak palpatine mon kenobi darth mothma skywalker dantooine. Wicket solo solo bespin hoth antilles.</p>
                         </section>
-                        <img class="gallery__slider__element__photo" src="/assets/images/architecture3.jpg" alt="project of library">
+                        <picture>
+                            <source srcset="./img/architecture3_s.webp" type="image/webp">
+                            <source srcset="./img/architecture3_s.jpg" type="image/jpeg">
+                            <img class="gallery__slider__element__photo" srcset="./img/architecture3_s.jpg">
+                        </picture>
                     </section>
                 </li> 
-                
+
             </ul>
-        </div>
+            <ul class="gallery__btns">
+                <button class="gallery__btns__1" id="gallery__btns__1"><a href="#gallery__slider__element__1"></a></button>
+                <button class="gallery__btns__2" id="gallery__btns__2"><a href="#gallery__slider__element__2"></a></button>
+                <button class="gallery__btns__3" id="gallery__btns__3"><a href="#gallery__slider__element__3"></a></button>
+            </ul>
     </section>
 
     <!-- Contact form -->
     <section class="contact" id="contact">
         <h5 class="contact__heading">Napisz do mnie</h5>
         <form class="contact__form">
-            <input type="email" placeholder="twój email">
-            <input type="text" placeholder="treść wiadomości">
+            <input class="contact__form__email" type="email" placeholder="wpisz swój adres email">
+            <input class="contact__form__msg" type="text" placeholder="wpisz treść wiadomości">
             <button class="contact__form__btn">Wyślij</button>
         </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <a href="mailto:adres@email.pl" class="info__email">adres@email.pl</a>
-        <h6 class="info__phone_number">000-111-222</h6>
-        <section class="info__go_up">
-            <div>
-                <ion-icon name="chevron-up-outline"></ion-icon>
-            </div>
+        <section class="info">
+            <section class="info__contact">
+                <a href="mailto:adres@email.pl" class="info__contact__email">adres@email.pl</a>
+                <h6 class="info__contact__phone_number">000-111-222</h6>
+            </section>
+                <div class="info__go_up">
+                    <ion-icon name="chevron-up-outline"></ion-icon>
+                </div>
+            <ul class="info__social_media">
+                <li class="info__social_media__linkedin"><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><ion-icon class="info__social_media__icon" name="logo-linkedin"></ion-icon></a></li> 
+                <li class="info__social_media__facebook"><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><ion-icon class="info__social_media__icon" name="logo-facebook"></ion-icon></a></li>
+                <li class="info__social_media__instagram"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><ion-icon class="info__social_media__icon" name="logo-instagram"></ion-icon></a></li>
+            </ul>
         </section>
-        <ul class="info__social_media">
-            <li class="info__social_media__linkedin"><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a></li> 
-            <li class="info__social_media__facebook"><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-facebook"></ion-icon></a></li>
-            <li class="info__social_media__instagram"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><ion-icon name="logo-instagram"></ion-icon></a></li>
-        </ul>
     </footer>
-    
+
     <script src="js/script.js"></script>
 </body>
 </html>
