@@ -1,308 +1,334 @@
 // Logo and navigation
 .heading {
+  display: flex;
+  flex-direction: column;
+
+  &__logo {
+    background-color: #b2d9d9;
+    border-radius: 50%;
+    width: 12.5rem;
+    height: 12.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    &__logo {
-        background-color: #B2D9D9;
-        border-radius: 50%;
-        width: 12.5rem;
-        height: 12.5rem;
-        margin-top: 2.5rem;
-        margin-bottom: 5rem;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
+  &__navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10rem 5rem 8rem;
+    list-style: none;
+
+    &__gallery {
+      padding-left: 2.8rem;
     }
 
-    &__navigation {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 10rem 5rem 10rem;
-        list-style: none;
+    &__link {
+      text-decoration: none;
+      font-family: $sans-serif;
+      font-size: 1rem;
+      color: #494949;
+      display: block;
+      text-align: center;
+      min-width: 8rem;
 
-        &__link {
-            text-decoration: none;
-            font-family: $sans-serif;
-            color: #000;
-            display: block;
-            text-align: center;
-            min-width: 8rem;
-        }
+      &:hover {
+        color: #000;
+      }
     }
+  }
 }
 
 //About me section
 
 .about_me {
-    background-color: $background-section-color;
+  background-color: $background-section-color;
+  height: 38rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__text {
+    flex-direction: column;
+    width: 35rem;
+    padding-left: 10rem;
+    font-weight: 400;
+
+    &__heading {
+      font-family: $serif;
+      font-size: 2rem;
+      padding-bottom: 1rem;
+    }
+
+    &__subheading {
+      font-family: $serif;
+      font-size: 1.5rem;
+    }
+
+    &__paragraph {
+      padding-top: 2rem;
+      font-family: $sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+    }
+  }
+
+  &__image {
     height: 38rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    width: 30rem;
+    margin-right: 14rem;
 
-    &__text {
-        flex-direction: column;
-        width: 40rem;
-        padding-left: 10rem;
-        font-weight: 400;
-
-        &__heading {
-            font-family: $serif;
-            font-size: 2rem;
-            padding-bottom: 1rem;
-        }
-
-        &__subheading {
-            font-family: $serif;
-            font-size: 1.5rem;
-        }
-
-        &__paragraph {
-            padding-top: 2rem;
-            font-family: $sans-serif;
-            font-weight: 300;
-            font-size: 1rem;
-        }
+    &__photo {
+      width: 34rem;
+      height: 38rem;
+      object-fit: cover;
     }
-
-    &__image {
-        height: 38rem;
-        width: 30rem;
-        margin-right: 14rem;
-
-        &__photo {
-            width: 34rem;
-            height: 38rem;
-            object-fit: cover;
-            
-        }
-    }
+  }
 }
 
 //Gallery section
 
 .gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8rem 10rem;
+  flex-wrap: wrap;
+
+  &__btns {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    padding: 8rem 10rem;
-    flex-wrap: wrap;
+    width: 19rem;
+    justify-content: space-between;
+    margin: 2rem 0;
 
-    &__btns {
+    &__1,
+    &__2,
+    &__3 {
+      height: 0.5rem;
+      width: 4rem;
+      outline: none;
+      border-style: none;
+      background-color: $grey-btn-color;
+
+      &:hover {
+        background-color: $active-grey-btn-color;
+        outline: none;
+        border-style: none;
+      }
+
+      &:active {
+        background-color: $active-grey-btn-color;
+        outline: none;
+      }
+
+      &:focus {
+        background-color: $active-grey-btn-color;
+      }
+    }
+  }
+
+  &__slider {
+    &__element {
+      list-style: none;
+      padding: none;
+      justify-content: space-between;
+
+      &__photo {
+        width: 50rem;
+        height: 27rem;
+        object-fit: cover;
+        padding-left: 7rem;
+      }
+
+      &__text {
+        flex-direction: column;
+        width: 19rem;
+
+        &__title {
+          font-size: 2rem;
+          font-family: $serif;
+          padding-bottom: 0.5rem;
+        }
+
+        &__project_type {
+          font-family: $sans-serif;
+          font-size: 1.5rem;
+          padding-bottom: 1.5rem;
+          font-weight: 400;
+        }
+
+        &__description {
+          font-family: $sans-serif;
+          font-weight: 300;
+        }
+      }
+
+      &__1 {
         display: flex;
         flex-direction: row;
-        width: 19rem;
         justify-content: space-between;
-        margin: 2rem 0;
-        
-        &__1,
-        &__2,
-        &__3 {
-            height: 0.5rem;
-            width: 4rem;
-            outline: none;
-            border-style: none;
-            background-color: $grey-btn-bolor;
+        align-items: center;
+      }
 
-            &:hover {
-                background-color: $active-grey-btn-color;
-                outline: none;
-                border-style: none;
-            }
+      &__2 {
+        display: none;
+        // display: flex;
+        // flex-direction: row;
+      }
 
-            &:active {
-                background-color: $active-grey-btn-color;
-                outline: none;
-            }
-
-            &:focus {
-                background-color: $active-grey-btn-color;
-            }
-        }
+      &__3 {
+        display: none;
+        // display: flex;
+        // flex-direction: row;
+      }
     }
-
-    &__slider { 
-
-        &__element {
-            list-style: none;
-            padding: none;
-            justify-content: space-between;
-            
-            
-            &__photo {
-                width: 50rem;
-                height: 27rem;
-                object-fit: cover;
-                padding-left: 7rem;
-            }
-
-            &__text{
-                flex-direction: column;
-                width: 19rem;
-
-                
-
-                &__title {
-                    font-size: 2rem;
-                    font-family: $serif;
-                    padding-bottom: 0.5rem;
-
-                }
-
-                &__project_type {
-                    font-family: $sans-serif;
-                    font-size: 1.5rem;
-                    padding-bottom: 1.5rem;
-                    font-weight: 400;
-                }
-
-                &__description {
-                    font-family: $sans-serif;
-                    font-weight: 300;
-                }
-            }
-
-            
-
-            &__1 {
-                
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                
-            }
-
-            &__2 {
-                display: none;
-                // display: flex;
-                // flex-direction: row;
-            }
-
-            &__3 {
-                display: none;
-                // display: flex;
-                // flex-direction: row;
-            }
-        }
-    }
+  }
 }
 
 //Contact form section
 
 .contact {
-    height: 28.5rem;
+  height: 28.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3.5rem 0;
+  background-color: $background-section-color;
+
+  &__heading {
+    font-family: $serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__form {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-flow: column wrap;
     align-items: center;
-    padding: 3.5rem 0;
-    background-color: $background-section-color;
+    justify-content: center;
 
-    &__heading {
-        font-family: $serif;
-        font-size: 2rem;
-        margin-bottom: 1rem;
+    &__email {
+      width: 32rem;
+      height: 2rem;
+      padding-left: 0.5rem;
+      margin-bottom: 2rem;
+      border-style: none;
+      font-family: $sans-serif;
+      outline: none;
+
+      &:active,
+      &:hover {
+        outline: none;
+      }
     }
 
-    &__form {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: center;
-        
+    &__msg {
+      width: 32rem;
+      padding: 0.5rem 0 10rem 0.5rem;
+      border-style: none;
+      font-family: $sans-serif;
+      outline: none;
+      max-width: 32rem;
+      max-height: 12rem;
+      min-width: 32rem;
+      min-height: 12rem;
 
-        &__email {
-            width: 32rem;
-            height: 2rem;
-            padding-left: 0.5rem;
-            margin-bottom: 2rem;
-            border-style: none;
-            font-family: $sans-serif;
-            outline: none;
-
-            &:active,
-            &:hover {
-                outline: none;
-            }
-            
-        }
-
-        &__msg {
-            width: 32rem;
-            padding: 0.5rem 0 10rem 0.5rem;
-            border-style: none;
-            font-family: $sans-serif;
-            outline: none;
-
-            &:active,
-            &:hover {
-                outline: none;
-            }
-
-        }
-
-        &__btn {
-            font-family: $serif;
-            font-size: 1.5rem;
-            margin-top: 1rem;
-            width: 10rem;
-            height: 4rem;
-            border-style: none;
-            background: none;
-
-            &:active,
-            &:hover {
-                outline: none;
-            }
-        }
+      &:active,
+      &:hover {
+        outline: none;
+      }
     }
+
+    &__btn {
+      font-family: $serif;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      width: 10rem;
+      height: 4rem;
+      border-style: none;
+      background: none;
+
+      &:active,
+      &:hover {
+        outline: none;
+      }
+    }
+  }
 }
 
 //Footer
 
 .info {
-    height: 7rem;
+  height: 7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+
+  &__go_up {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    width: 20rem;
+    height: 2rem;
+
+    &__icon {
+      font-size: 3rem;
+      color: $active-grey-btn-color;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-flow: row nowrap;
     align-items: center;
-    padding: 0 10rem;
+    justify-content: left;
+    font-size: 1rem;
+    font-family: $sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    width: 20rem;
 
-    &__go_up {
-        display: flex;
-        justify-content: center;
-        width: 1rem;
-        height: auto;
+    &__email {
+      color: #000;
+      padding-right: 2.5rem;
     }
 
-    &__contact {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        justify-content: center;
-        width: 10rem;
+    &__phone_number {
+      font-size: 1rem;
+      font-weight: 300;
     }
+  }
 
-    &__social_media {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        justify-content: space-between;
-        width: 12rem;
-        list-style: none;
+  &__social_media {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 20rem;
+    list-style: none;
 
-        &__icon {
-            width: 2.5rem;
-            height: 2.5rem;
-            color: #000;
-            text-decoration: none;
-        }
+    &__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      color: $active-grey-btn-color;
+      text-decoration: none;
+
+      &:hover {
+        color: #000;
+      }
     }
+  }
 }
