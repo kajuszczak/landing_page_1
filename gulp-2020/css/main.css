@@ -402,6 +402,7 @@ button:hover {
 .info__go_up__icon {
   font-size: 3rem;
   color: #6A6A6A;
+  cursor: pointer;
 }
 
 .info__go_up__icon:hover {

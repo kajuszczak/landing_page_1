@@ -124,6 +124,29 @@ testWebP(function (support) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./base */ "./src/js/base.js");
 /* harmony import */ var _base__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_base__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _landingpage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./landingpage */ "./src/js/landingpage.js");
+/* harmony import */ var _landingpage__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_landingpage__WEBPACK_IMPORTED_MODULE_1__);
+
+ //go-up button
+
+var goUpBtn = document.querySelector(".info__go_up__icon");
+goUpBtn.addEventListener("click", function () {
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: "smooth"
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/landingpage.js":
+/*!*******************************!*\
+  !*** ./src/js/landingpage.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
 
 
 /***/ })
