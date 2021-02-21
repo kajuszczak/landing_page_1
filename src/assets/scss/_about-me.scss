@@ -1,0 +1,46 @@
+//About me section
+
+.about_me {
+    background-color: $background-section-color;
+    height: 38rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    &__text {
+      flex-direction: column;
+      width: 35rem;
+      padding-left: 10rem;
+      font-weight: 300;
+  
+      &__heading {
+        font-family: $serif;
+        font-size: 2rem;
+        padding-bottom: 1rem;
+      }
+  
+      &__subheading {
+        font-family: $serif;
+        font-size: 1.5rem;
+      }
+  
+      &__paragraph {
+        padding-top: 2rem;
+        font-family: $sans-serif;
+        font-weight: 300;
+        font-size: 1rem;
+      }
+    }
+  
+    &__image {
+      height: 38rem;
+      width: 30rem;
+      margin-right: 14rem;
+  
+      &__photo {
+        width: 34rem;
+        height: 38rem;
+        object-fit: cover;
+      }
+    }
+  }

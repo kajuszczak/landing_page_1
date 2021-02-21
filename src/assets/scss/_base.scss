@@ -14,12 +14,14 @@ body {
 a {
     text-decoration: none;
     transition: all 200ms ease-in-out;
-  }
 
-a:hover,
-a:active {
-  text-decoration: none;
-}
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+
+
+  }
 
 button:hover {
   cursor: pointer;

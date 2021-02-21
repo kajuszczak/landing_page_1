@@ -1,0 +1,59 @@
+//Contact form section
+
+.contact {
+    height: 28.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3.5rem 0;
+    background-color: $background-section-color;
+  
+    &__heading {
+      font-family: $serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    &__form {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+  
+      &__email {
+        width: 32rem;
+        height: 2rem;
+        padding-left: 0.5rem;
+        margin-bottom: 2rem;
+        border-style: none;
+        font-family: $sans-serif;
+        outline: none;
+  
+      }
+  
+      &__msg {
+        width: 32rem;
+        padding: 0.5rem 0 10rem 0.5rem;
+        border-style: none;
+        font-family: $sans-serif;
+        outline: none;
+        max-width: 32rem;
+        max-height: 12rem;
+        min-width: 32rem;
+        min-height: 12rem;
+        outline: none;
+      }
+  
+      &__btn {
+        font-family: $serif;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        width: 10rem;
+        height: 4rem;
+        border-style: none;
+        background: none;
+        outline: none;
+      }
+    }
+  }

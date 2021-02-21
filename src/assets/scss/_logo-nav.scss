@@ -1,0 +1,45 @@
+// Logo and navigation
+
+.heading {
+  display: flex;
+  flex-direction: column;
+
+  &__logo {
+    background-color: #b2d9d9;
+    border-radius: 50%;
+    width: 12.5rem;
+    height: 12.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10rem 5rem 8rem;
+    list-style: none;
+
+    &__gallery {
+      padding-left: 2.8rem;
+    }
+
+    &__link {
+      text-decoration: none;
+      font-family: $sans-serif;
+      font-size: 1rem;
+      color: $nav-link-color;
+      display: block;
+      text-align: center;
+      min-width: 8rem;
+
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+}

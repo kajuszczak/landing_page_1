@@ -67,10 +67,6 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -102,10 +98,6 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -121,7 +113,7 @@ button:hover {
           flex-direction: column;
   width: 35rem;
   padding-left: 10rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .about_me__text__heading {
@@ -159,10 +151,6 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -175,10 +163,6 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   width: 19rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -197,24 +181,17 @@ button:hover {
 }
 
 .gallery__btns__1:hover,
+.gallery__btns__1:active,
+.gallery__btns__1:focus,
 .gallery__btns__2:hover,
-.gallery__btns__3:hover {
+.gallery__btns__2:active,
+.gallery__btns__2:focus,
+.gallery__btns__3:hover,
+.gallery__btns__3:active,
+.gallery__btns__3:focus {
   background-color: #6A6A6A;
   outline: none;
   border-style: none;
-}
-
-.gallery__btns__1:active,
-.gallery__btns__2:active,
-.gallery__btns__3:active {
-  background-color: #6A6A6A;
-  outline: none;
-}
-
-.gallery__btns__1:focus,
-.gallery__btns__2:focus,
-.gallery__btns__3:focus {
-  background-color: #6A6A6A;
 }
 
 .gallery__slider__element {
@@ -251,7 +228,7 @@ button:hover {
   font-family: "Montserrat";
   font-size: 1.5rem;
   padding-bottom: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .gallery__slider__element__text__description {
@@ -263,10 +240,6 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -333,11 +306,6 @@ button:hover {
   outline: none;
 }
 
-.contact__form__email:active,
-.contact__form__email:hover {
-  outline: none;
-}
-
 .contact__form__msg {
   width: 32rem;
   padding: 0.5rem 0 10rem 0.5rem;
@@ -348,10 +316,6 @@ button:hover {
   max-height: 12rem;
   min-width: 32rem;
   min-height: 12rem;
-}
-
-.contact__form__msg:active,
-.contact__form__msg:hover {
   outline: none;
 }
 
@@ -363,10 +327,6 @@ button:hover {
   height: 4rem;
   border-style: none;
   background: none;
-}
-
-.contact__form__btn:active,
-.contact__form__btn:hover {
   outline: none;
 }
 
@@ -375,10 +335,6 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
