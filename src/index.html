@@ -15,24 +15,36 @@
 <body>
 
     <!-- Header with navigation menu -->
-    <header class="heading">
-        <div class="heading__logo" id="heading__logo">
-            
+    <header class="heading" class="container">
+        <div class="heading__title" id="heading__title">
+            PATRYCJA KOŁACZYŃSKA
         </div>
         <nav>
             <ul class="heading__navigation">
-                <li class="heading__navigation__aboutme"><a class="heading__navigation__link" href="#about_me">O MNIE</a></li>
-                <li class="heading__navigation__gallery"><a class="heading__navigation__link" href="#gallery">PROJEKTY</a></li>
-                <li class="heading__navigation__contact"><a class="heading__navigation__link" href="#contact">NAPISZ DO MNIE</a></li>
+                <li><a class="heading__navigation__link" href="#about_me">O MNIE</a></li>
+                <li><a class="heading__navigation__link" href="#gallery">PROJEKTY</a></li>
+                <li><a class="heading__navigation__link" href="#contact">NAPISZ DO MNIE</a></li>
             </ul>
         </nav>
+        <h1 class="heading__paragraph">Stworzę dla Ciebie 
+            <div>
+                <span class="heading__active">budynek,</span>
+                <span>wnętrze,</span>
+                <span>koncepcję.</span> 
+            </div>
+        </h1>
     </header>
 
     <!-- About me section -->
     <section class="about_me" id="about_me">
+        <div class="about_me__hi-slider">
+            <div class="about_me__hi-slider__element">CZEŚĆ</div>
+            <div class="about_me__hi-slider__element">CZEŚĆ</div>
+            <div class="about_me__hi-slider__element">CZEŚĆ</div>
+        </div>
         <div class="about_me__text">
-            <h1 class="about_me__text__heading">Hi! My name is XXX.</h1>
-            <h2 class="about_me__text__subheading">I am an architect.</h2>
+            <h2 class="about_me__text__heading">Hi! My name is XXX.</h2>
+            <h3 class="about_me__text__subheading">I am an architect.</h3>
             <p class="about_me__text__paragraph">Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff mace skywalker windu yavin. Zabrak palpatine mon kenobi darth mothma skywalker dantooine. Wicket solo solo bespin hoth antilles solo. Han lars ben organa. Utapau tatooine yoda luke solo anakin. Skywalker wicket leia maul padmé kamino ventress jawa solo. Calrissian mothma calamari fett ewok ponda binks jabba dagobah. </p>
         </div>
         <section class="about_me__image">
@@ -46,6 +58,25 @@
         </section>
     </section>
 
+    <!-- Quote section -->
+    <section class="quote">
+        <p class="quote--text">„Nie można być architektem bez ciągłego i pełnego pokory badania rzeczywistości, bez rozmów z osobami, które będą mieszkać w danym miejscu. 
+            Budynek nie jest ozdobą – prowadzi ciągły dialog z otoczeniem. Trzeba poświęcić uwagę tej scenerii.”
+        </p>
+        <p class="quote--author">
+            Renzo Piano
+        </p>
+    </section>
+
+    <!-- Fullsize image section and title scrolling loop-->
+    <section class="title-loop">
+        <div class="title-loop--slider">
+            <div class="title-loop--slider--element">PROJEKTY</div>
+            <div class="title-loop--slider--element">PROJEKTY</div>
+            <div class="title-loop--slider--element">PROJEKTY</div>
+        </div>
+    </section>
+
     <!-- Gallery of projects section -->
     <section class="gallery" id="gallery">
             <ul class="gallery__slider"></ul>
@@ -53,8 +84,8 @@
                 <li class="gallery__slider__element">
                     <section class="gallery__slider__element__1" id="gallery__slider__element__1">
                         <section class="gallery__slider__element__text">
-                            <h3 class="gallery__slider__element__text__title">Han lars ben organa </h3>
-                            <h4 class="gallery__slider__element__text__project_type">Han lars ben</h4>
+                            <h4 class="gallery__slider__element__text__title">Han lars ben organa </h4>
+                            <h5 class="gallery__slider__element__text__project_type">Han lars ben</h5>
                             <p class="gallery__slider__element__text__description">Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff mace skywalker windu yavin. Zabrak palpatine mon kenobi darth mothma skywalker dantooine. Wicket solo solo bespin hoth antilles.</p>
                         </section>
                         <section>
@@ -70,8 +101,8 @@
                 <li class="gallery__slider__element">
                     <section class="gallery__slider__element__2" id="gallery__slider__element__2">
                         <section class="gallery__slider__element__2__text">
-                            <h3 class="gallery__slider__element__text__title">Han lars ben organa 2</h3>
-                            <h4 class="gallery__slider__element__text__project_type">Han lars ben 2</h4>
+                            <h4 class="gallery__slider__element__text__title">Han lars ben organa 2</h4>
+                            <h5 class="gallery__slider__element__text__project_type">Han lars ben 2</h5>
                             <p class="gallery__slider__element__text__description">Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff mace skywalker windu yavin. Zabrak palpatine mon kenobi darth mothma skywalker dantooine. Wicket solo solo bespin hoth antilles.</p>
                         </section>
                         <picture>
@@ -85,8 +116,8 @@
                 <li class="gallery__slider__element">
                     <section class="gallery__slider__element__3" id="gallery__slider__element__3">
                         <section class="gallery__slider__element__text">
-                            <h3 class="gallery__slider__element__text__title">Han lars ben organa </h3>
-                            <h4 class="gallery__slider__element__text__project_type">Han lars ben</h4>
+                            <h4 class="gallery__slider__element__text__title">Han lars ben organa </h4>
+                            <h5 class="gallery__slider__element__text__project_type">Han lars ben</h5>
                             <p class="gallery__slider__element__text__description">Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff mace skywalker windu yavin. Zabrak palpatine mon kenobi darth mothma skywalker dantooine. Wicket solo solo bespin hoth antilles.</p>
                         </section>
                         <picture>
@@ -107,7 +138,7 @@
 
     <!-- Contact form -->
     <section class="contact" id="contact">
-        <h5 class="contact__heading">Napisz do mnie</h5>
+        <h6 class="contact__heading">Napisz do mnie</h6>
         <form class="contact__form">
             <input class="contact__form__email" type="email" placeholder="wpisz swój adres email">
             <textarea class="contact__form__msg" name="message" rows="4" cols="50" placeholder="wpisz treść wiadomości"></textarea>

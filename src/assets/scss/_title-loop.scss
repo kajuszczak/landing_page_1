@@ -1,0 +1,22 @@
+.title-loop {
+    height: 45rem;
+    background-image: url(/img/fullsize-img.webp);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-attachment: fixed;
+    
+    &--slider {
+    display: flex;
+      font-family: $sans-serif;
+      font-size: 15rem;
+      font-weight: 300;
+      color: #9EC8C8;
+      opacity: 0.7;
+
+      &--element {
+          padding-right: 2rem;
+      }
+    }
+}

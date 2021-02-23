@@ -33,34 +33,37 @@ button:hover {
   cursor: pointer;
 }
 
+.container {
+  max-width: 72rem;
+  padding: 0 45rem;
+}
+
 .heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  height: 45rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: url(/img/background-header.webp);
+  background-size: cover;
+  padding: 6rem 8rem 6rem 8rem;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-attachment: fixed;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-.heading__logo {
-  background-color: #b2d9d9;
-  border-radius: 50%;
-  width: 12.5rem;
-  height: 12.5rem;
-  margin-top: 2.5rem;
-  margin-bottom: 5rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.heading__title {
+  font-family: "Montserrat";
+  font-size: 2rem;
+  color: #000;
 }
 
 .heading__navigation {
@@ -70,26 +73,36 @@ button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 10rem 5rem 8rem;
   list-style: none;
-}
-
-.heading__navigation__gallery {
-  padding-left: 2.8rem;
 }
 
 .heading__navigation__link {
   text-decoration: none;
   font-family: "Montserrat";
-  font-size: 1rem;
-  color: #494949;
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: 500;
   display: block;
   text-align: center;
   min-width: 8rem;
+  margin-left: 3.5rem;
 }
 
 .heading__navigation__link:hover {
-  color: #000;
+  color: #9EC8C8;
+}
+
+.heading__paragraph {
+  font-size: 6rem;
+  font-family: "Rozha One";
+  font-weight: 500;
+  padding-top: 7.5rem;
+  line-height: 1.05;
+  cursor: default;
+}
+
+.heading__active:hover {
+  color: #9EC8C8;
 }
 
 .about_me {
@@ -104,6 +117,23 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about_me__hi-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Montserrat";
+  font-size: 15rem;
+  font-weight: 300;
+  color: #9EC8C8;
+  opacity: 0.7;
+}
+
+.about_me__hi-slider__element {
+  padding-right: 10rem;
 }
 
 .about_me__text {
@@ -145,6 +175,75 @@ button:hover {
   height: 38rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.quote {
+  height: 45rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 8rem;
+  background-color: #FBFBFB;
+}
+
+.quote--text {
+  font-family: "Rozha One";
+  font-size: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.quote--text:hover {
+  color: #9EC8C8;
+  font-style: italic;
+  -webkit-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  cursor: default;
+}
+
+.quote--author {
+  font-family: "Montserrat";
+  font-size: 2rem;
+  text-align: right;
+}
+
+.title-loop {
+  height: 45rem;
+  background-image: url(/img/fullsize-img.webp);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-attachment: fixed;
+}
+
+.title-loop--slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Montserrat";
+  font-size: 15rem;
+  font-weight: 300;
+  color: #9EC8C8;
+  opacity: 0.7;
+}
+
+.title-loop--slider--element {
+  padding-right: 2rem;
 }
 
 .gallery {

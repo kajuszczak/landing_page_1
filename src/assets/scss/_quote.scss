@@ -1,0 +1,28 @@
+.quote {
+    height: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8rem;
+    background-color: $background-section-color;
+
+    &--text {
+        font-family: $serif;
+        font-size: 2.5rem;
+        padding-bottom: 4rem;
+
+        &:hover {
+            color: $blue-color;
+            font-style: italic;
+            transition: all 0.6s ease-in-out;
+            cursor: default;
+        }
+    }
+
+    &--author {
+        font-family: $sans-serif;
+        font-size: 2rem;
+        text-align: right;
+
+    }
+}
