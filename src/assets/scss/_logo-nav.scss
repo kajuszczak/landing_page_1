@@ -13,35 +13,36 @@
   align-items: flex-end;
   
   
-  &__title {
+  
+  &--title {
     font-family: $sans-serif;
     font-size: 2rem;
     color: #000;
   }
 
-  &__navigation {
+  &--navigation {
     display: flex;
     justify-content: space-between;
     list-style: none;
+    }
 
-    &__link {
-      text-decoration: none;
-      font-family: $sans-serif;
-      font-size: 1.5rem;
-      color: #000;
-      font-weight: 500;
-      display: block;
-      text-align: center;
-      min-width: 8rem;
-      margin-left: 3.5rem;
+  &--link {
+    text-decoration: none;
+    font-family: $sans-serif;
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    min-width: 8rem;
+    margin-left: 3.5rem;
 
       &:hover {
         color: $blue-color;
       }
-    }
   }
 
-  &__paragraph {
+  &--paragraph {
     font-size: 6rem;
     font-family: $serif;
     font-weight: 500;
@@ -50,7 +51,7 @@
     cursor: default;
   }
 
-  &__active:hover {
+  &--active:hover {
     color: $blue-color;
   }
 }

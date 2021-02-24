@@ -6,82 +6,81 @@
     padding: 8rem 10rem;
     flex-wrap: wrap;
   
-    &__btns {
+    &--btns {
       display: flex;
       width: 19rem;
       justify-content: space-between;
       margin: 2rem 0;
-  
-      &__1,
-      &__2,
-      &__3 {
-        height: 0.5rem;
-        width: 4rem;
+    }
+    &--btn1,
+    &--btn2,
+    &--btn3 {
+      height: 0.5rem;
+      width: 4rem;
+      outline: none;
+      border-style: none;
+      background-color: $grey-btn-color;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $active-grey-btn-color;
         outline: none;
         border-style: none;
-        background-color: $grey-btn-color;
-  
-        &:hover,
-        &:active,
-        &:focus {
-          background-color: $active-grey-btn-color;
-          outline: none;
-          border-style: none;
-        }
-      }
+      } 
     }
   
-    &__slider {
-      &__element {
-        list-style: none;
-        padding: none;
-        justify-content: space-between;
-  
-        &__photo {
-          width: 50rem;
-          height: 27rem;
-          object-fit: cover;
-          padding-left: 7rem;
-        }
-  
-        &__text {
-          flex-direction: column;
-          width: 19rem;
-  
-          &__title {
-            font-size: 2rem;
-            font-family: $serif;
-            padding-bottom: 0.5rem;
-          }
-  
-          &__project_type {
-            font-family: $sans-serif;
-            font-size: 1.5rem;
-            padding-bottom: 1.5rem;
-            font-weight: 300;
-          }
-  
-          &__description {
-            font-family: $sans-serif;
-            font-weight: 300;
-          }
-        }
-  
-        &__1 {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-  
-        &__2 {
-          display: none;
-          // display: flex;
-        }
-  
-        &__3 {
-          display: none;
-          // display: flex;
-        }
-      }
+    
+    &--element {
+      list-style: none;
+      padding: none;
+      justify-content: space-between;
     }
+
+    &--photo {
+      width: 50rem;
+      height: 27rem;
+      object-fit: cover;
+      padding-left: 7rem;
+    }
+  
+    &--text {
+      flex-direction: column;
+      width: 19rem;
+    }
+
+    &--title {
+      font-size: 2rem;
+      font-family: $serif;
+      padding-bottom: 0.5rem;
+    }
+  
+    &--project-type {
+      font-family: $sans-serif;
+      font-size: 1.5rem;
+      padding-bottom: 1.5rem;
+      font-weight: 300;
+    }
+  
+    &--description {
+      font-family: $sans-serif;
+      font-weight: 300;
+    }
+       
+  
+    &--element1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    &--element2 {
+      display: none;
+      // display: flex;
+    }
+  
+    &--element3 {
+      display: none;
+      // display: flex;
+    }  
   }

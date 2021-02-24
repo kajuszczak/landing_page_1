@@ -8,15 +8,21 @@
     background-attachment: fixed;
     
     &--slider {
-    display: flex;
+      display: flex;
       font-family: $sans-serif;
       font-size: 15rem;
       font-weight: 300;
       color: #9EC8C8;
       opacity: 0.7;
+      animation: --slider 10s linear infinite;
 
-      &--element {
-          padding-right: 2rem;
-      }
+      @keyframes --slider {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(-120%, 0);
+        }
     }
+  }
 }

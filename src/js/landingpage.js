@@ -1,6 +1,6 @@
 //go-up button
 
-const goUpBtn = document.querySelector(".info__go_up__icon");
+const goUpBtn = document.querySelector(".info--up-icon");
 
 goUpBtn.addEventListener("click", function() {
     window.scroll({
@@ -9,4 +9,3 @@ goUpBtn.addEventListener("click", function() {
         behavior: "smooth"
     });
 });
-

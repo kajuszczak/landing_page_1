@@ -60,13 +60,13 @@ button:hover {
           align-items: flex-end;
 }
 
-.heading__title {
+.heading--title {
   font-family: "Montserrat";
   font-size: 2rem;
   color: #000;
 }
 
-.heading__navigation {
+.heading--navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,7 +76,7 @@ button:hover {
   list-style: none;
 }
 
-.heading__navigation__link {
+.heading--link {
   text-decoration: none;
   font-family: "Montserrat";
   font-size: 1.5rem;
@@ -88,11 +88,11 @@ button:hover {
   margin-left: 3.5rem;
 }
 
-.heading__navigation__link:hover {
+.heading--link:hover {
   color: #9EC8C8;
 }
 
-.heading__paragraph {
+.heading--paragraph {
   font-size: 6rem;
   font-family: "Rozha One";
   font-weight: 500;
@@ -101,16 +101,20 @@ button:hover {
   cursor: default;
 }
 
-.heading__active:hover {
+.heading--active:hover {
   color: #9EC8C8;
 }
 
-.about_me {
+.about-me {
   background-color: #FBFBFB;
   height: 38rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -119,9 +123,10 @@ button:hover {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 100%;
 }
 
-.about_me__hi-slider {
+.about-me--hi-slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,13 +135,43 @@ button:hover {
   font-weight: 300;
   color: #9EC8C8;
   opacity: 0.7;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: inherit;
+  -webkit-animation: --hi-slider 8s linear infinite;
+          animation: --hi-slider 8s linear infinite;
 }
 
-.about_me__hi-slider__element {
-  padding-right: 10rem;
+@-webkit-keyframes --hi-slider {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(-120%, 0);
+            transform: translate(-120%, 0);
+  }
 }
 
-.about_me__text {
+@keyframes --hi-slider {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(-120%, 0);
+            transform: translate(-120%, 0);
+  }
+}
+
+.about-me--hi-slider div {
+  padding-right: 2rem;
+}
+
+.about-me--text {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -146,31 +181,32 @@ button:hover {
   font-weight: 300;
 }
 
-.about_me__text__heading {
+.about-me--heading {
   font-family: "Rozha One";
   font-size: 2rem;
   padding-bottom: 1rem;
 }
 
-.about_me__text__subheading {
+.about-me--subheading {
   font-family: "Rozha One";
   font-size: 1.5rem;
 }
 
-.about_me__text__paragraph {
+.about-me--paragraph {
   padding-top: 2rem;
   font-family: "Montserrat";
   font-weight: 300;
   font-size: 1rem;
 }
 
-.about_me__image {
+.about-me--image {
   height: 38rem;
   width: 30rem;
   margin-right: 14rem;
+  z-index: 2;
 }
 
-.about_me__image__photo {
+.about-me--photo {
   width: 34rem;
   height: 38rem;
   -o-object-fit: cover;
@@ -240,10 +276,32 @@ button:hover {
   font-weight: 300;
   color: #9EC8C8;
   opacity: 0.7;
+  -webkit-animation: --slider 10s linear infinite;
+          animation: --slider 10s linear infinite;
 }
 
-.title-loop--slider--element {
-  padding-right: 2rem;
+@-webkit-keyframes --slider {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(-120%, 0);
+            transform: translate(-120%, 0);
+  }
+}
+
+@keyframes --slider {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(-120%, 0);
+            transform: translate(-120%, 0);
+  }
 }
 
 .gallery {
@@ -258,7 +316,7 @@ button:hover {
       flex-wrap: wrap;
 }
 
-.gallery__btns {
+.gallery--btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,9 +327,9 @@ button:hover {
   margin: 2rem 0;
 }
 
-.gallery__btns__1,
-.gallery__btns__2,
-.gallery__btns__3 {
+.gallery--btn1,
+.gallery--btn2,
+.gallery--btn3 {
   height: 0.5rem;
   width: 4rem;
   outline: none;
@@ -279,21 +337,21 @@ button:hover {
   background-color: #c4c4c4;
 }
 
-.gallery__btns__1:hover,
-.gallery__btns__1:active,
-.gallery__btns__1:focus,
-.gallery__btns__2:hover,
-.gallery__btns__2:active,
-.gallery__btns__2:focus,
-.gallery__btns__3:hover,
-.gallery__btns__3:active,
-.gallery__btns__3:focus {
+.gallery--btn1:hover,
+.gallery--btn1:active,
+.gallery--btn1:focus,
+.gallery--btn2:hover,
+.gallery--btn2:active,
+.gallery--btn2:focus,
+.gallery--btn3:hover,
+.gallery--btn3:active,
+.gallery--btn3:focus {
   background-color: #6A6A6A;
   outline: none;
   border-style: none;
 }
 
-.gallery__slider__element {
+.gallery--element {
   list-style: none;
   padding: none;
   -webkit-box-pack: justify;
@@ -301,7 +359,7 @@ button:hover {
           justify-content: space-between;
 }
 
-.gallery__slider__element__photo {
+.gallery--photo {
   width: 50rem;
   height: 27rem;
   -o-object-fit: cover;
@@ -309,7 +367,7 @@ button:hover {
   padding-left: 7rem;
 }
 
-.gallery__slider__element__text {
+.gallery--text {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -317,25 +375,25 @@ button:hover {
   width: 19rem;
 }
 
-.gallery__slider__element__text__title {
+.gallery--title {
   font-size: 2rem;
   font-family: "Rozha One";
   padding-bottom: 0.5rem;
 }
 
-.gallery__slider__element__text__project_type {
+.gallery--project-type {
   font-family: "Montserrat";
   font-size: 1.5rem;
   padding-bottom: 1.5rem;
   font-weight: 300;
 }
 
-.gallery__slider__element__text__description {
+.gallery--description {
   font-family: "Montserrat";
   font-weight: 300;
 }
 
-.gallery__slider__element__1 {
+.gallery--element1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,11 +405,11 @@ button:hover {
           align-items: center;
 }
 
-.gallery__slider__element__2 {
+.gallery--element2 {
   display: none;
 }
 
-.gallery__slider__element__3 {
+.gallery--element3 {
   display: none;
 }
 
@@ -373,13 +431,14 @@ button:hover {
   background-color: #FBFBFB;
 }
 
-.contact__heading {
+.contact--heading {
   font-family: "Rozha One";
   font-size: 2rem;
+  font-weight: 300;
   margin-bottom: 1rem;
 }
 
-.contact__form {
+.contact--form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,7 +454,7 @@ button:hover {
           justify-content: center;
 }
 
-.contact__form__email {
+.contact--email {
   width: 32rem;
   height: 2rem;
   padding-left: 0.5rem;
@@ -405,28 +464,30 @@ button:hover {
   outline: none;
 }
 
-.contact__form__msg {
+.contact--msg {
   width: 32rem;
   padding: 0.5rem 0 10rem 0.5rem;
   border-style: none;
   font-family: "Montserrat";
   outline: none;
-  max-width: 32rem;
-  max-height: 12rem;
-  min-width: 32rem;
-  min-height: 12rem;
-  outline: none;
+  resize: none;
 }
 
-.contact__form__btn {
+.contact--btn {
   font-family: "Rozha One";
   font-size: 1.5rem;
+  font-weight: 300;
   margin-top: 1rem;
   width: 10rem;
   height: 4rem;
   border-style: none;
   background: none;
   outline: none;
+}
+
+.contact--btn:hover,
+.contact--btn:active {
+  color: #9EC8C8;
 }
 
 .info {
@@ -443,7 +504,7 @@ button:hover {
   padding: 0 10rem;
 }
 
-.info__go_up {
+.info--go-up {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -454,17 +515,17 @@ button:hover {
   height: 2rem;
 }
 
-.info__go_up__icon {
+.info--up-icon {
   font-size: 3rem;
   color: #6A6A6A;
   cursor: pointer;
 }
 
-.info__go_up__icon:hover {
-  color: #000;
+.info--up-icon:hover {
+  color: #9EC8C8;
 }
 
-.info__contact {
+.info--contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -485,17 +546,18 @@ button:hover {
   width: 20rem;
 }
 
-.info__contact__email {
+.info--email {
   color: #000;
   padding-right: 2.5rem;
 }
 
-.info__contact__phone_number {
+.info--phone-number {
   font-size: 1rem;
   font-weight: 300;
+  color: #000;
 }
 
-.info__social_media {
+.info--social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -513,15 +575,15 @@ button:hover {
   list-style: none;
 }
 
-.info__social_media__icon {
+.info--social-media-icon {
   width: 2.5rem;
   height: 2.5rem;
   color: #6A6A6A;
   text-decoration: none;
 }
 
-.info__social_media__icon:hover {
-  color: #000;
+.info--social-media-icon:hover {
+  color: #9EC8C8;
 }
 @supports (-webkit-appearance:none){
 

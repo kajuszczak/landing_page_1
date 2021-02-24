@@ -139,7 +139,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports) {
 
 //go-up button
-var goUpBtn = document.querySelector(".info__go_up__icon");
+var goUpBtn = document.querySelector(".info--up-icon");
 goUpBtn.addEventListener("click", function () {
   window.scroll({
     top: 0,
