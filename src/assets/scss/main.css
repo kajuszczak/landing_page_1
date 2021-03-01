@@ -7,7 +7,6 @@
 
 html,
 body {
-  background-color: #fdfdfd;
   scroll-behavior: smooth;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,20 +15,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100vw;
-  overflow-x: hidden;
-  max-width: 100vw;
 }
 
 a {
   text-decoration: none;
   -webkit-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
-a:hover,
-a:active {
+a:hover, a:active {
   text-decoration: none;
 }
 
@@ -64,22 +58,13 @@ button:hover {
           align-items: flex-end;
 }
 
-.heading__title {
+.heading--title {
   font-family: "Montserrat";
   font-size: 2rem;
-  color: #121212;
-  cursor: pointer;
-  font-weight: 500;
+  color: #000;
 }
 
-.heading__title:hover {
-  color: #9EC8C8;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.heading__navigation {
+.heading--navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,10 +74,11 @@ button:hover {
   list-style: none;
 }
 
-.heading__link {
+.heading--link {
+  text-decoration: none;
   font-family: "Montserrat";
   font-size: 1.5rem;
-  color: #121212;
+  color: #000;
   font-weight: 500;
   display: block;
   text-align: center;
@@ -100,14 +86,11 @@ button:hover {
   margin-left: 3.5rem;
 }
 
-.heading__link:hover {
+.heading--link:hover {
   color: #9EC8C8;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
-.heading__paragraph {
+.heading--paragraph {
   font-size: 6rem;
   font-family: "Rozha One";
   font-weight: 500;
@@ -116,22 +99,20 @@ button:hover {
   cursor: default;
 }
 
-.heading__active:hover {
+.heading--active:hover {
   color: #9EC8C8;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .about-me {
-  height: 45rem;
+  background-color: #FBFBFB;
+  height: 38rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -140,34 +121,10 @@ button:hover {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  z-index: 5;
+  width: 100%;
 }
 
-@-webkit-keyframes __hi-slider {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-
-  100% {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
-  }
-}
-
-@keyframes __hi-slider {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-
-  100% {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
-  }
-}
-
-.about-me__hi-slider {
+.about-me--hi-slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,76 +132,81 @@ button:hover {
   font-size: 15rem;
   font-weight: 300;
   color: #9EC8C8;
-  opacity: 0.8;
+  opacity: 0.7;
   position: relative;
-  z-index: -1;
-  -webkit-animation: __hi-slider 100s linear infinite;
-          animation: __hi-slider 100s linear infinite;
-  padding-top: 4rem;
-  cursor: default;
+  z-index: 1;
+  overflow: hidden;
+  width: inherit;
+  -webkit-animation: --hi-slider 8s linear infinite;
+          animation: --hi-slider 8s linear infinite;
 }
 
-.about-me__hi-slider__el {
-  padding-right: 4rem;
+@-webkit-keyframes --hi-slider {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-120%, 0);
+            transform: translate(-120%, 0);
+  }
 }
 
-.about-me__text {
+@keyframes --hi-slider {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-120%, 0);
+            transform: translate(-120%, 0);
+  }
+}
+
+.about-me--hi-slider div {
+  padding-right: 2rem;
+}
+
+.about-me--text {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50rem;
-  padding: 24rem 0 0 8rem;
+  width: 35rem;
+  padding-left: 10rem;
   font-weight: 300;
-  position: absolute;
 }
 
-.about-me__text--highlighted {
-  color: #9EC8C8;
-}
-
-.about-me__heading {
-  width: 50rem;
+.about-me--heading {
   font-family: "Rozha One";
-  font-size: 3rem;
-  font-weight: 300;
+  font-size: 2rem;
   padding-bottom: 1rem;
 }
 
-.about-me__subheading {
+.about-me--subheading {
   font-family: "Rozha One";
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 1.5rem;
 }
 
-.about-me__paragraph {
-  padding-top: 1rem;
+.about-me--paragraph {
+  padding-top: 2rem;
   font-family: "Montserrat";
   font-weight: 300;
   font-size: 1rem;
 }
 
-.about-me__image {
+.about-me--image {
   height: 38rem;
   width: 30rem;
   margin-right: 14rem;
+  z-index: 2;
 }
 
-.about-me__photo {
-  position: absolute;
-  top: 720px;
-  left: 66%;
+.about-me--photo {
   width: 34rem;
-  height: 45rem;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
-  -webkit-clip-path: circle(78.4% at 95% 38%);
-          clip-path: circle(78.4% at 95% 38%);
-}
-
-.about-me__photo:hover {
-  -webkit-clip-path: none;
-          clip-path: none;
+  height: 38rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .quote {
@@ -273,7 +235,6 @@ button:hover {
   color: #9EC8C8;
   font-style: italic;
   -webkit-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
   cursor: default;
 }
@@ -301,32 +262,7 @@ button:hover {
   background-attachment: fixed;
 }
 
-@-webkit-keyframes __slider {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-
-  100% {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
-  }
-}
-
-@keyframes __slider {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-
-  100% {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
-  }
-}
-
-.title-loop__slider {
-  position: absolute;
+.title-loop--slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -334,14 +270,31 @@ button:hover {
   font-size: 15rem;
   font-weight: 300;
   color: #9EC8C8;
-  opacity: 0.8;
-  -webkit-animation: __slider 100s linear infinite;
-          animation: __slider 100s linear infinite;
-  cursor: default;
+  opacity: 0.7;
+  -webkit-animation: --slider 10s linear infinite;
+          animation: --slider 10s linear infinite;
 }
 
-.title-loop__slider__el {
-  padding-right: 4rem;
+@-webkit-keyframes --slider {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-120%, 0);
+            transform: translate(-120%, 0);
+  }
+}
+
+@keyframes --slider {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-120%, 0);
+            transform: translate(-120%, 0);
+  }
 }
 
 .gallery {
@@ -354,10 +307,9 @@ button:hover {
   padding: 8rem 10rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  height: 45rem;
 }
 
-.gallery__btn-container {
+.gallery--btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,7 +320,7 @@ button:hover {
   margin: 2rem 0;
 }
 
-.gallery__btn {
+.gallery--btn1, .gallery--btn2, .gallery--btn3 {
   height: 0.5rem;
   width: 4rem;
   outline: none;
@@ -376,15 +328,13 @@ button:hover {
   background-color: #c4c4c4;
 }
 
-.gallery__btn:hover,
-.gallery__btn:active,
-.gallery__btn:focus {
-  background-color: #9EC8C8;
+.gallery--btn1:hover, .gallery--btn1:active, .gallery--btn1:focus, .gallery--btn2:hover, .gallery--btn2:active, .gallery--btn2:focus, .gallery--btn3:hover, .gallery--btn3:active, .gallery--btn3:focus {
+  background-color: #6A6A6A;
   outline: none;
   border-style: none;
 }
 
-.gallery__element-container {
+.gallery--element {
   list-style: none;
   padding: none;
   -webkit-box-pack: justify;
@@ -392,7 +342,7 @@ button:hover {
           justify-content: space-between;
 }
 
-.gallery__photo {
+.gallery--photo {
   width: 50rem;
   height: 27rem;
   -o-object-fit: cover;
@@ -400,7 +350,7 @@ button:hover {
   padding-left: 7rem;
 }
 
-.gallery__text {
+.gallery--text {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -408,30 +358,25 @@ button:hover {
   width: 19rem;
 }
 
-.gallery__title {
+.gallery--title {
   font-size: 2rem;
   font-family: "Rozha One";
   padding-bottom: 0.5rem;
-  font-weight: 300;
 }
 
-.gallery__project-type {
+.gallery--project-type {
   font-family: "Montserrat";
   font-size: 1.5rem;
   padding-bottom: 1.5rem;
   font-weight: 300;
 }
 
-.gallery__description {
+.gallery--description {
   font-family: "Montserrat";
   font-weight: 300;
 }
 
-.gallery__element {
-  display: none;
-}
-
-.gallery__element--visible {
+.gallery--element1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -443,8 +388,16 @@ button:hover {
           align-items: center;
 }
 
+.gallery--element2 {
+  display: none;
+}
+
+.gallery--element3 {
+  display: none;
+}
+
 .contact {
-  height: 30rem;
+  height: 28.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -461,14 +414,14 @@ button:hover {
   background-color: #FBFBFB;
 }
 
-.contact__heading {
+.contact--heading {
   font-family: "Rozha One";
   font-size: 2rem;
   font-weight: 300;
   margin-bottom: 1rem;
 }
 
-.contact__form {
+.contact--form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,7 +437,7 @@ button:hover {
           justify-content: center;
 }
 
-.contact__email {
+.contact--email {
   width: 32rem;
   height: 2rem;
   padding-left: 0.5rem;
@@ -494,7 +447,7 @@ button:hover {
   outline: none;
 }
 
-.contact__msg {
+.contact--msg {
   width: 32rem;
   padding: 0.5rem 0 10rem 0.5rem;
   border-style: none;
@@ -503,20 +456,19 @@ button:hover {
   resize: none;
 }
 
-.contact__btn {
+.contact--btn {
   font-family: "Rozha One";
   font-size: 1.5rem;
   font-weight: 300;
+  margin-top: 1rem;
   width: 10rem;
   height: 4rem;
   border-style: none;
   background: none;
   outline: none;
-  margin-top: 1rem;
 }
 
-.contact__btn:hover,
-.contact__btn:active {
+.contact--btn:hover, .contact--btn:active {
   color: #9EC8C8;
 }
 
@@ -534,7 +486,7 @@ button:hover {
   padding: 0 10rem;
 }
 
-.info__go-up {
+.info--go-up {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -545,17 +497,17 @@ button:hover {
   height: 2rem;
 }
 
-.info__up-icon {
+.info--up-icon {
   font-size: 3rem;
   color: #6A6A6A;
   cursor: pointer;
 }
 
-.info__up-icon:hover {
+.info--up-icon:hover {
   color: #9EC8C8;
 }
 
-.info__contact {
+.info--contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -576,18 +528,18 @@ button:hover {
   width: 20rem;
 }
 
-.info__email {
-  color: #121212;
+.info--email {
+  color: #000;
   padding-right: 2.5rem;
 }
 
-.info__phone-number {
+.info--phone-number {
   font-size: 1rem;
   font-weight: 300;
-  color: #121212;
+  color: #000;
 }
 
-.info__social-media {
+.info--social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -605,16 +557,14 @@ button:hover {
   list-style: none;
 }
 
-.info__social-media-icon {
+.info--social-media-icon {
   width: 2.5rem;
   height: 2.5rem;
   color: #6A6A6A;
   text-decoration: none;
 }
 
-.info__social-media-icon:hover {
+.info--social-media-icon:hover {
   color: #9EC8C8;
 }
-@supports (-webkit-appearance:none){
-
-}
+/*# sourceMappingURL=main.css.map */

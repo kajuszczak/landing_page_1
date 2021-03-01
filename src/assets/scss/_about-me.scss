@@ -1,80 +1,94 @@
 //About me section
 
 .about-me {
-    background-color: $background-section-color;
-    height: 38rem;
+    height: 45rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%;
+    z-index: 5;
     
-    
-
-    &--hi-slider {
+    @keyframes __hi-slider {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(-100%, 0);
+      }
+    }
+  
+    &__hi-slider {
       display: flex;
       font-family: $sans-serif;
       font-size: 15rem;
       font-weight: 300;
-      color: #9EC8C8;
-      opacity: 0.7;
+      color: $blue-color;
+      opacity: 0.8;
       position: relative;
-      z-index: 1;
-      overflow: hidden;
-      width: inherit;
-      animation: --hi-slider 8s linear infinite;
-
-      @keyframes --hi-slider {
-        0% {
-          transform: translate(0, 0);
-        }
-        100% {
-          transform: translate(-120%, 0);
-        }
-      }
-
-      & div {
-        padding-right: 2rem;
-      }
-    }
+      z-index: -1;
+      animation: __hi-slider 100s linear infinite;
+      padding-top: 4rem;
+      cursor: default;
   
-    &--text {
+        &__el {
+          padding-right: 4rem;
+        }
+      
+      }
+    &__text {
       flex-direction: column;
-      width: 35rem;
-      padding-left: 10rem;
+      width: 50rem;
+      padding: 24rem 0 0 8rem;
       font-weight: 300;
+      position: absolute;
+
+      &--highlighted {
+        color: $blue-color;
+      }
     }
 
-    &--heading {
+    &__heading {
+      width: 50rem;
       font-family: $serif;
-      font-size: 2rem;
+      font-size: 3rem;
+      font-weight: 300;
       padding-bottom: 1rem;
     }
   
-    &--subheading {
+    &__subheading {
       font-family: $serif;
-      font-size: 1.5rem;
+      font-size: 2rem;
+      font-weight: 300;
     }
   
-    &--paragraph {
-      padding-top: 2rem;
+    &__paragraph {
+      padding-top: 1rem;
       font-family: $sans-serif;
       font-weight: 300;
       font-size: 1rem;
     }
     
-  
-    &--image {
+    &__image {
       height: 38rem;
       width: 30rem;
       margin-right: 14rem;
-      z-index: 2;
     }
 
-    &--photo {
+    &__photo {
+      position: absolute;
+      top: 720px;
+      left: 66%;
       width: 34rem;
-      height: 38rem;
-      object-fit: cover;
+      height: 45rem;
+      object-fit: scale-down;
+      clip-path: circle(78.4% at 95% 38%);
+
+        &:hover {
+          // transition: all 10s ease-in-out; 
+          clip-path: none;
+        }
     }
-  }
+}
+
+  

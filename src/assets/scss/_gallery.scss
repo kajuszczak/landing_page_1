@@ -5,16 +5,15 @@
     align-items: center;
     padding: 8rem 10rem;
     flex-wrap: wrap;
+    height: 45rem;
   
-    &--btns {
+    &__btn-container {
       display: flex;
       width: 19rem;
       justify-content: space-between;
       margin: 2rem 0;
     }
-    &--btn1,
-    &--btn2,
-    &--btn3 {
+    &__btn {
       height: 0.5rem;
       width: 4rem;
       outline: none;
@@ -24,63 +23,57 @@
       &:hover,
       &:active,
       &:focus {
-        background-color: $active-grey-btn-color;
+        background-color: $blue-color;
         outline: none;
         border-style: none;
       } 
     }
   
     
-    &--element {
+    &__element-container {
       list-style: none;
       padding: none;
       justify-content: space-between;
     }
 
-    &--photo {
+    &__photo {
       width: 50rem;
       height: 27rem;
       object-fit: cover;
       padding-left: 7rem;
     }
   
-    &--text {
+    &__text {
       flex-direction: column;
       width: 19rem;
     }
 
-    &--title {
+    &__title {
       font-size: 2rem;
       font-family: $serif;
       padding-bottom: 0.5rem;
+      font-weight: 300;
     }
   
-    &--project-type {
+    &__project-type {
       font-family: $sans-serif;
       font-size: 1.5rem;
       padding-bottom: 1.5rem;
       font-weight: 300;
     }
   
-    &--description {
+    &__description {
       font-family: $sans-serif;
       font-weight: 300;
     }
        
-  
-    &--element1 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    &--element2 {
+    &__element {
       display: none;
-      // display: flex;
+
+      &--visible {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
-  
-    &--element3 {
-      display: none;
-      // display: flex;
-    }  
   }

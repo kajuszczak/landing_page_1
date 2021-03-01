@@ -7,14 +7,14 @@
     align-items: center;
     padding: 0 10rem;
   
-    &--go-up {
+    &__go-up {
       display: flex;
       justify-content: center;
       width: 20rem;
       height: 2rem;
     }
 
-    &--up-icon {
+    &__up-icon {
       font-size: 3rem;
       color: $active-grey-btn-color;
       cursor: pointer;
@@ -25,7 +25,7 @@
     }
     
   
-    &--contact {
+    &__contact {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
@@ -37,19 +37,19 @@
       width: 20rem;
     }
 
-    &--email {
-      color: $link-hover-color;
+    &__email {
+      color: $black;
       padding-right: 2.5rem;
     }
   
-    &--phone-number {
+    &__phone-number {
       font-size: 1rem;
       font-weight: 300;
-      color: $link-hover-color;
+      color: $black;
     }
     
   
-    &--social-media {
+    &__social-media {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
@@ -58,7 +58,7 @@
       list-style: none;
     }
 
-    &--social-media-icon {
+    &__social-media-icon {
       width: 2.5rem;
       height: 2.5rem;
       color: $active-grey-btn-color;
