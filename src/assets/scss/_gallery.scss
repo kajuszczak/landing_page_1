@@ -46,6 +46,16 @@
     &__text {
       flex-direction: column;
       width: 19rem;
+
+      &--1 {
+        display: flex;
+      }
+      &--2 {
+        display: none;
+      }
+      &--3 {
+        display: none;
+      }
     }
 
     &__title {

@@ -27,6 +27,7 @@
       opacity: 0.8;
       animation: __slider 100s linear infinite;
       cursor: default;
+      transform: translateY(300px);
 
       &__el {
         padding-right: 4rem;
