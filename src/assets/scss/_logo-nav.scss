@@ -25,6 +25,11 @@
     }
   }
 
+  &__navigation-container {
+  display: flex;
+  padding-right: 0;
+  }
+  
   &__navigation {
     display: flex;
     justify-content: space-between;
@@ -46,6 +51,13 @@
       transition: all 0.3s ease-in-out;
     }
   }
+
+  // &__trigger-el {
+  //   font-size: 1.5rem;
+  //   margin-left: 2rem;
+  //   margin-top: .25rem;
+  //   position: sticky;
+  // }
 
   &__paragraph {
     font-size: 6rem;

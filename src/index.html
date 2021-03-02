@@ -19,12 +19,13 @@
                 PATRYCJA KOŁACZYŃSKA
             </a>
         </div>
-        <nav>
+        <nav class="heading__navigation-container">
             <ul class="heading__navigation">
                 <li><a class="heading__link" href="#about-me">O MNIE</a></li>
                 <li><a class="heading__link" href="#gallery">PROJEKTY</a></li>
                 <li><a class="heading__link" href="#contact">NAPISZ DO MNIE</a></li>
             </ul>
+            <!-- <div class="heading__trigger-el"><ion-icon name="menu-outline"></ion-icon></div> -->
         </nav>
         <h1 class="heading__paragraph">Stworzę dla Ciebie 
             <div>
@@ -46,14 +47,13 @@
             <span class="marquee__text">CZEŚĆ CZEŚĆ CZEŚĆ&nbsp;</span>
           </p>
         </div>
-        
         <div class="container">
             <div class="about-me__text">
                 <h2 class="about-me__heading">Nazywam się <span class="about-me__text--highlighted">Patrycja Kołaczyńska.</span></h2>
                 <h3 class="about-me__subheading">Jestem <span class="about-me__text--highlighted">architektem. </span></h3>
                 <p class="about-me__paragraph">Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff mace skywalker windu yavin. Zabrak palpatine mon kenobi darth mothma skywalker dantooine. Wicket solo solo bespin hoth antilles solo. Han lars ben organa. Utapau tatooine yoda luke solo anakin. </p>
             </div>
-            <div class="about-me__image">
+            <div>
                 <picture>
                     <source srcset="./img/portrait.webp" type="image/webp">
                     <source srcset="./img/portrait.jpg" type="image/jpeg">
@@ -75,12 +75,12 @@
 
     <!-- Fullsize image section and title scrolling loop-->
     <section class="title-loop">
-        <div class="marquee__container">
+        <div class="marquee__container title-loop__placing">
             <p class="marquee">
-            <span class="marquee__text">CZEŚĆ CZEŚĆ CZEŚĆ CZEŚĆ </span>
+            <span class="marquee__text">PROJEKTY PROJEKTY PROJEKTY PROJEKTY </span>
           </p>
           <p class="marquee marquee2">
-            <span class="marquee__text">CZEŚĆ CZEŚĆ CZEŚĆ CZEŚĆ </span>
+            <span class="marquee__text">PROJEKTY PROJEKTY PROJEKTY PROJEKTY</span>
           </p>
         </div>
     </section>
@@ -88,53 +88,59 @@
     <!-- Gallery of projects section -->
     <section class="gallery container" id="gallery">
             <ul>
-                <li class="gallery__element-container">
+                <li class="gallery__text-container">
                     <figure class="gallery__element gallery__element--visible" id="gallery__element1">
                         <figcaption class="gallery__text">
-                            <h4 class="gallery__title">Han lars ben organa 1</h4>
-                            <h5 class="gallery__project-type">Han lars ben 1</h5>
+                            <h4 class="gallery__title">Centrum Sportowe w Łodzi</h4>
+                            <h5 class="gallery__project-type">projekt budynku użyteczności publicznej</h5>
                             <p class="gallery__description">Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff mace skywalker windu yavin. Zabrak palpatine mon kenobi darth mothma skywalker dantooine. Wicket solo solo bespin hoth antilles.</p>
                         </figcaption>
-                        <div>
-                            <picture>
-                                <source srcset="./img/architecture1.webp" type="image/webp">
-                                <source srcset="./img/architecture1.jpg" type="image/jpeg">
-                                <img class="gallery__photo" srcset="./img/architecture1.jpg" alt="Sports centre project">
-                            </picture>
-                        </div>
                     </figure>
                 </li>
 
-                <li class="gallery__element-container">
-                    <figure class="gallery__element " id="gallery__element2">
+                <li class="gallery__text-container">
+                    <figure class="gallery__element" id="gallery__element2">
                         <figcaption class="gallery__text">
-                            <h4 class="gallery__title">Han lars ben organa 2</h4>
-                            <h5 class="gallery__project-type">Han lars ben 2</h5>
+                            <h4 class="gallery__title">Plac miejski w Łowiczu</h4>
+                            <h5 class="gallery__project-type">projekt zagospodarowania terenu publicznego</h5>
                             <p class="gallery__description">Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff mace skywalker windu yavin. Zabrak palpatine mon kenobi darth mothma skywalker dantooine. Wicket solo solo bespin hoth antilles.</p>
                         </figcaption>
-                        <picture>
-                            <source srcset="./img/architecture2.webp" type="image/webp">
-                            <source srcset="./img/architecture2.jpg" type="image/jpeg">
-                            <img class="gallery__photo" srcset="./img/architecture2.jpg" alt="Urban square development project">
-                        </picture>
+                        
                     </figure>
                 </li>
 
-                <li class="gallery__element-container">
+                <li class="gallery__text-container">
                     <figure class="gallery__element" id="gallery__element3">
                         <figcaption class="gallery__text">
-                            <h4 class="gallery__title">Han lars ben organa 3</h4>
-                            <h5 class="gallery__project-type">Han lars ben 3</h5>
+                            <h4 class="gallery__title">Biblioteka miejska w Łodzi</h4>
+                            <h5 class="gallery__project-type">projekt budynku użyteczności publicznej</h5>
                             <p class="gallery__description">Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff mace skywalker windu yavin. Zabrak palpatine mon kenobi darth mothma skywalker dantooine. Wicket solo solo bespin hoth antilles.</p>
                         </figcaption>
-                        <picture>
-                            <source srcset="./img/architecture3.webp" type="image/webp">
-                            <source srcset="./img/architecture3.jpg" type="image/jpeg">
-                            <img class="gallery__photo" srcset="./img/architecture3.jpg" alt="Library project">
-                        </picture>
                     </figure>
                 </li> 
- 
+            </ul>
+            <ul class="gallery__photo">
+                <li class="gallery__photo-container">
+                    <picture>
+                        <source srcset="./img/architecture1.webp" type="image/webp">
+                        <source srcset="./img/architecture1.jpg" type="image/jpeg">
+                        <img class="gallery__photo-element" srcset="./img/architecture1.jpg" alt="Sports centre project">
+                    </picture>
+                </li>
+                <li class="gallery__photo-container">
+                    <picture>
+                        <source srcset="./img/architecture2.webp" type="image/webp">
+                        <source srcset="./img/architecture2.jpg" type="image/jpeg">
+                        <img class="gallery__photo-element" srcset="./img/architecture2.jpg" alt="Urban square development project">
+                    </picture>
+                </li>
+                <li class="gallery__photo-container">
+                    <picture>
+                        <source srcset="./img/architecture3.webp" type="image/webp">
+                        <source srcset="./img/architecture3.jpg" type="image/jpeg">
+                        <img class="gallery__photo-element" srcset="./img/architecture3.jpg" alt="Library project">
+                    </picture>
+                </li>
             </ul>
             <ul class="gallery__btn-container">
                 <button class="gallery__btn gallery__btn1" id="gallery__btn1"><a href="#gallery__element1"></a></button>

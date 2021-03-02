@@ -6,12 +6,14 @@
     padding: 8rem 10rem;
     flex-wrap: wrap;
     height: 45rem;
+    padding-right: 0;
   
     &__btn-container {
       display: flex;
       width: 19rem;
       justify-content: space-between;
-      margin: 2rem 0;
+      position: absolute;
+      margin-top: 26rem;
     }
     &__btn {
       height: 0.5rem;
@@ -30,28 +32,38 @@
     }
   
     
-    &__element-container {
-      list-style: none;
-      padding: none;
-      justify-content: space-between;
+    
+    &__photo {
+      display: flex;
+      margin-left: 20rem;
     }
 
-    &__photo {
+    &__photo-container {
+      list-style: none;
+      
+    }
+
+    &__photo-element {
       width: 50rem;
       height: 27rem;
       object-fit: cover;
       padding-left: 7rem;
     }
   
+    &__text-container {
+      list-style: none;
+      padding: none;
+      justify-content: space-between;
+    }
+
     &__text {
       flex-direction: column;
-      width: 19rem;
-
-
+      width: 20rem;
+      padding-top: 6rem;
     }
 
     &__title {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-family: $serif;
       padding-bottom: 0.5rem;
       font-weight: 300;
@@ -59,7 +71,7 @@
   
     &__project-type {
       font-family: $sans-serif;
-      font-size: 1.5rem;
+      font-size: 1rem;
       padding-bottom: 1.5rem;
       font-weight: 300;
     }
@@ -70,6 +82,7 @@
     }
        
     &__element {
+      position: absolute;
       display: none;
 
       &--visible {
