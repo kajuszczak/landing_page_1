@@ -419,20 +419,6 @@ button:hover {
   width: 19rem;
 }
 
-.gallery__text--1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.gallery__text--2 {
-  display: none;
-}
-
-.gallery__text--3 {
-  display: none;
-}
-
 .gallery__title {
   font-size: 2rem;
   font-family: "Rozha One";
