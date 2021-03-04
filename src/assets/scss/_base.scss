@@ -31,5 +31,13 @@ button:hover {
 
 .container {
   padding: 0 8rem;
+
+  @media (max-width: $tablet-size) {
+    padding: 0 4rem;
+  }
+  @media (max-width: $mobile-size) {
+    padding: 0 2rem;
+  }
+
 }
   

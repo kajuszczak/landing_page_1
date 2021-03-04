@@ -8,7 +8,6 @@
     align-items: center;
     flex-wrap: wrap;
     z-index: 5;
-    
        
     &__text {
       flex-direction: column;
@@ -21,6 +20,7 @@
       &--highlighted {
         color: $blue-color;
       }
+
     }
 
     &__heading {
@@ -29,12 +29,24 @@
       font-size: 3rem;
       font-weight: 300;
       padding-bottom: 1rem;
+
+      @media (max-width: $tablet-size) {
+        width: 100vw;
+        font-size: 2.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 0.5rem;
+      }
     }
   
     &__subheading {
       font-family: $serif;
       font-size: 2rem;
       font-weight: 300;
+
+      @media (max-width: $tablet-size) {
+        font-size: 1.8rem;
+        padding-bottom: 0.5rem;
+      }
     }
   
     &__paragraph {
@@ -42,6 +54,11 @@
       font-family: $sans-serif;
       font-weight: 300;
       font-size: 1rem;
+      
+      @media (max-width: $tablet-size) {
+        width: 25rem;
+        padding-top: 0.5rem;
+      }
     }
 
     &__photo {
@@ -57,6 +74,11 @@
           clip-path: none;
           transition: all 10s ease-in-out;
           transition-delay: 20s;
+        }
+      
+        @media (max-width: $tablet-size) {
+          left: 50%;
+          z-index: -1;
         }
     }
 }
@@ -100,10 +122,15 @@
           cursor: default;
       }
 
+      @media (max-width: $tablet-size) {
+        z-index: -2;
+      }
     }
       .marquee2 .marquee__text{
         animation-delay: 20s;
       }
+
+      
       
       @keyframes marquee {
         0% {
@@ -113,6 +140,3 @@
           transform: translateX(-100%);
         }
       }
-
-
-  

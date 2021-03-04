@@ -6,11 +6,18 @@
   justify-content: space-between;
   background-image: url(/img/background-header.webp);
   background-size: cover;
-  padding: 6rem 8rem 6rem 8rem;
-  align-items: baseline;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  align-items: center;
   flex-wrap: wrap;
   background-attachment: fixed;
   align-items: flex-end;
+
+  @media (max-width: $tablet-size) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    align-items: center;
+  }
 
   &__title {
     font-family: $sans-serif;
@@ -22,6 +29,10 @@
     &:hover {
       color: $blue-color;
       transition: all 0.3s ease-in-out;
+    }
+
+    @media (max-width: $tablet-size) {
+      font-size: 1.2rem;
     }
   }
 
@@ -50,14 +61,13 @@
       color: $blue-color;
       transition: all 0.3s ease-in-out;
     }
-  }
 
-  // &__trigger-el {
-  //   font-size: 1.5rem;
-  //   margin-left: 2rem;
-  //   margin-top: .25rem;
-  //   position: sticky;
-  // }
+    @media (max-width: $tablet-size) {
+      font-size: 1rem;
+      min-width: 6rem;
+      margin-left: 1rem;
+    }
+  }
 
   &__paragraph {
     font-size: 6rem;
@@ -66,8 +76,17 @@
     padding-top: 7.5rem;
     line-height: 1.05;
     cursor: default;
-  }
 
+    @media (max-width: $tablet-size) {
+      font-size: 4rem;
+      padding-top: 0;
+    }
+  }
+  &__active {
+    @media (max-width: $tablet-size) {
+      color: $blue-color;
+    }
+  }
   &__active:hover {
     color: $blue-color;
     transition: all 0.3s ease-in-out;

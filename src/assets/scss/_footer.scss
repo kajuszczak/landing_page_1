@@ -34,17 +34,30 @@
       text-decoration: none;
       font-weight: 300;
       width: 20rem;
+
+      @media (max-width: $tablet-size) {
+        font-size: 0.8rem;
+      }
     }
 
     &__email {
       color: $black;
       padding-right: 2.5rem;
+
+      @media (max-width: $tablet-size) {
+      padding-right: 1rem;
+      }
+
     }
   
     &__phone-number {
       font-size: 1rem;
       font-weight: 300;
       color: $black;
+
+      @media (max-width: $tablet-size) {
+      font-size: 0.8rem;
+      }
     }
     
   

@@ -5,3 +5,24 @@ $nav-link-color: #494949;
 $black: #121212;
 $white: #fdfdfd;
 $blue-color: #9EC8C8;
+
+//media-query
+$mobile-size: 415px;
+$tablet-size: 768px;
+$retina_nonretina-min: 1200px;
+$retina_nonretina-max: 1600px;
+
+// /* ----------- Non-Retina Screens ----------- */
+// @media screen 
+//   and (min-device-width: 1200px) 
+//   and (max-device-width: 1600px) 
+//   and (-webkit-min-device-pixel-ratio: 1) { 
+// }
+
+// /* ----------- Retina Screens ----------- */
+// @media screen 
+//   and (min-device-width: 1200px) 
+//   and (max-device-width: 1600px) 
+//   and (-webkit-min-device-pixel-ratio: 2)
+//   and (min-resolution: 192dpi) { 
+// }

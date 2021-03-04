@@ -6,6 +6,10 @@
     flex-direction: column;
     justify-content: flex-end;
     background-attachment: fixed;
+
+    @media (max-width: $tablet-size) {
+      width: 100vw;
+    }
     
     &__placing {
       padding-top: 0;

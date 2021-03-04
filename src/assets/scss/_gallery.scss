@@ -7,14 +7,22 @@
     flex-wrap: wrap;
     height: 45rem;
     padding-right: 0;
+
+    @media (max-width: $tablet-size) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   
+    
     &__btn-container {
       display: flex;
       width: 19rem;
       justify-content: space-between;
       position: absolute;
-      margin-top: 26rem;
+      margin-top: 40rem;
     }
+
     &__btn {
       height: 0.5rem;
       width: 4rem;
@@ -36,11 +44,20 @@
     &__photo {
       display: flex;
       margin-left: 20rem;
+
+      @media (max-width: $tablet-size) {
+        align-items: center;
+        margin-left: 0;
+      }
+
     }
 
     &__photo-container {
       list-style: none;
       
+      @media (max-width: $tablet-size) {
+        margin: 0 0 8rem 4rem;
+      }
     }
 
     &__photo-element {
@@ -48,18 +65,35 @@
       height: 27rem;
       object-fit: cover;
       padding-left: 7rem;
+
+      @media (max-width: $tablet-size) {
+        width: 32rem;
+        height: auto;
+        padding-left: 0;
+      }
+
     }
   
     &__text-container {
       list-style: none;
       padding: none;
       justify-content: space-between;
+
+      @media (max-width: $tablet-size) {
+        position: absolute;
+        left: 30%;
+        margin-top: 17rem;
+      }
     }
 
-    &__text {
+    &__text-elements {
       flex-direction: column;
       width: 20rem;
       padding-top: 6rem;
+
+      @media (max-width: $tablet-size) {
+        width: 20rem;
+      }
     }
 
     &__title {
@@ -67,6 +101,10 @@
       font-family: $serif;
       padding-bottom: 0.5rem;
       font-weight: 300;
+
+      @media (max-width: $tablet-size) {
+        padding-bottom: 0.5rem;
+      }
     }
   
     &__project-type {
@@ -74,11 +112,21 @@
       font-size: 1rem;
       padding-bottom: 1.5rem;
       font-weight: 300;
+
+      @media (max-width: $tablet-size) {
+        font-size: 1rem;
+        padding-bottom: 1rem;
+      }
     }
   
     &__description {
       font-family: $sans-serif;
       font-weight: 300;
+
+      @media (max-width: $tablet-size) {
+        font-size: 0.6rem;
+        padding-bottom: 0;
+      }
     }
        
     &__element {

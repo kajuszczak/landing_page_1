@@ -51,10 +51,11 @@ button:hover {
           justify-content: space-between;
   background-image: url(/img/background-header.webp);
   background-size: cover;
-  padding: 6rem 8rem 6rem 8rem;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-attachment: fixed;
@@ -360,7 +361,7 @@ button:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: absolute;
-  margin-top: 26rem;
+  margin-top: 40rem;
 }
 
 .gallery__btn {
@@ -406,7 +407,7 @@ button:hover {
           justify-content: space-between;
 }
 
-.gallery__text {
+.gallery__text-elements {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -622,6 +623,157 @@ button:hover {
 .info__social-media-icon:hover {
   color: #9EC8C8;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 4rem;
+  }
+
+  .heading {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .heading__title {
+    font-size: 1.2rem;
+  }
+
+  .heading__link {
+    font-size: 1rem;
+    min-width: 6rem;
+    margin-left: 1rem;
+  }
+
+  .heading__paragraph {
+    font-size: 4rem;
+    padding-top: 0;
+  }
+
+  .heading__active {
+    color: #9EC8C8;
+  }
+
+  .about-me__heading {
+    width: 100vw;
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .about-me__subheading {
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .about-me__paragraph {
+    width: 25rem;
+    padding-top: 0.5rem;
+  }
+
+  .about-me__photo {
+    left: 50%;
+    z-index: -1;
+  }
+
+  .marquee {
+    z-index: -2;
+  }
+
+  .title-loop {
+    width: 100vw;
+  }
+
+  .gallery {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .gallery__photo {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 0;
+  }
+
+  .gallery__photo-container {
+    margin: 0 0 8rem 4rem;
+  }
+
+  .gallery__photo-element {
+    width: 32rem;
+    height: auto;
+    padding-left: 0;
+  }
+
+  .gallery__text-container {
+    position: absolute;
+    left: 30%;
+    margin-top: 17rem;
+  }
+
+  .gallery__text-elements {
+    width: 20rem;
+  }
+
+  .gallery__title {
+    padding-bottom: 0.5rem;
+  }
+
+  .gallery__project-type {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .gallery__description {
+    font-size: 0.6rem;
+    padding-bottom: 0;
+  }
+
+  .info__contact {
+    font-size: 0.8rem;
+  }
+
+  .info__email {
+    padding-right: 1rem;
+  }
+
+  .info__phone-number {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 415px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
 @supports (-webkit-appearance:none){
+
+}
+
+ @media (max-width: 768px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 415px){
+
+@supports (-webkit-appearance:none){
+
+}
 
 }
