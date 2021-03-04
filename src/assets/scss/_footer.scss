@@ -5,12 +5,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
+
+    @media (max-width: $mobile-size) {
+      height: 4rem;
+    }
+
     &__go-up {
       display: flex;
       justify-content: center;
       width: 20rem;
       height: 2rem;
+
+      @media (max-width: $mobile-size) {
+        width: 10rem;
+      }
     }
 
     &__up-icon {
@@ -20,6 +28,10 @@
 
       &:hover {
         color: $blue-color;
+      }
+
+      @media (max-width: $mobile-size) {
+        font-size: 2rem;
       }
     }
     
@@ -37,6 +49,10 @@
 
       @media (max-width: $tablet-size) {
         font-size: 0.8rem;
+      }
+
+      @media (max-width: $mobile-size) {
+        font-size: 0.5rem;
       }
     }
 
@@ -58,6 +74,10 @@
       @media (max-width: $tablet-size) {
       font-size: 0.8rem;
       }
+
+      @media (max-width: $mobile-size) {
+        font-size: 0.5rem;
+      }
     }
     
   
@@ -65,7 +85,7 @@
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
       width: 20rem;
       list-style: none;
     }
@@ -78,6 +98,11 @@
   
       &:hover {
         color: $blue-color;
+      }
+
+      @media (max-width: $mobile-size) {
+        width: 1.2rem;
+        height: 1.2rem;
       }
     }
   }

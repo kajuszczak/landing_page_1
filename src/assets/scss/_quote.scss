@@ -6,6 +6,10 @@
     justify-content: center;
     background-color: $background-section-color;
     
+    @media (max-width: $mobile-size) {
+        height: 20rem;
+    }
+
     &__text {
         font-family: $serif;
         font-size: 2.5rem;
@@ -17,6 +21,11 @@
             transition: all 0.2s ease-in-out;
             cursor: default;
         }
+
+        @media (max-width: $mobile-size) {
+            font-size: 1rem;
+            padding-bottom: 2rem;
+        }
     }
 
     &__author {
@@ -24,5 +33,8 @@
         font-size: 2rem;
         text-align: right;
 
+        @media (max-width: $mobile-size) {
+            font-size: 1rem;
+        }
     }
 }

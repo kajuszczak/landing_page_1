@@ -13,6 +13,10 @@
       justify-content: center;
       align-items: center;
     }
+
+    @media (max-width: $mobile-size) {
+      height: 30rem;
+    }
   
     
     &__btn-container {
@@ -20,7 +24,17 @@
       width: 19rem;
       justify-content: space-between;
       position: absolute;
-      margin-top: 40rem;
+      margin-top: 27rem;
+
+      @media (max-width: $tablet-size) {
+        margin-top: 40rem;
+      }
+
+      @media (max-width: $mobile-size) {
+        margin-top: 17rem;
+        width: 12rem;
+        
+      }
     }
 
     &__btn {
@@ -37,6 +51,12 @@
         outline: none;
         border-style: none;
       } 
+
+      @media (max-width: $mobile-size) {
+        // width: 2rem;
+        display: none;
+      }
+
     }
   
     
@@ -58,6 +78,10 @@
       @media (max-width: $tablet-size) {
         margin: 0 0 8rem 4rem;
       }
+
+      @media (max-width: $mobile-size) {
+        margin: 0 0 7rem 1rem;
+      }
     }
 
     &__photo-element {
@@ -72,6 +96,10 @@
         padding-left: 0;
       }
 
+      @media (max-width: $mobile-size) {
+        width: 20rem;
+      }
+
     }
   
     &__text-container {
@@ -84,6 +112,11 @@
         left: 30%;
         margin-top: 17rem;
       }
+
+      @media (max-width: $mobile-size) {
+        left: 12%;
+        margin-top: 9rem;
+      }
     }
 
     &__text-elements {
@@ -93,6 +126,10 @@
 
       @media (max-width: $tablet-size) {
         width: 20rem;
+      }
+
+      @media (max-width: $mobile-size) {
+        width: 16rem;
       }
     }
 
@@ -104,6 +141,11 @@
 
       @media (max-width: $tablet-size) {
         padding-bottom: 0.5rem;
+      }
+
+      @media (max-width: $mobile-size) {
+        font-size: 1.2rem;
+        padding-bottom: 0;
       }
     }
   
@@ -117,6 +159,11 @@
         font-size: 1rem;
         padding-bottom: 1rem;
       }
+
+      @media (max-width: $mobile-size) {
+        font-size: 0.7rem;
+        padding-bottom: 1rem;
+    }
     }
   
     &__description {
@@ -126,6 +173,10 @@
       @media (max-width: $tablet-size) {
         font-size: 0.6rem;
         padding-bottom: 0;
+      }
+
+      @media (max-width: $mobile-size) {
+        font-size: 0.6rem;
       }
     }
        
