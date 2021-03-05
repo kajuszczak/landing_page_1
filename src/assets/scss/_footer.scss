@@ -47,6 +47,10 @@
       font-weight: 300;
       width: 20rem;
 
+      @media (max-width: $mid-size){
+        font-size: 0.9rem
+      }
+
       @media (max-width: $tablet-size) {
         font-size: 0.8rem;
       }
@@ -60,8 +64,11 @@
       color: $black;
       padding-right: 2.5rem;
 
+      @media (max-width: $mid-size){
+        padding-right: 1.5rem;
+      }
       @media (max-width: $tablet-size) {
-      padding-right: 1rem;
+        padding-right: 1rem;
       }
 
     }
@@ -71,8 +78,8 @@
       font-weight: 300;
       color: $black;
 
-      @media (max-width: $tablet-size) {
-      font-size: 0.8rem;
+      @media (max-width: $mid-size){
+        font-size: 0.8rem
       }
 
       @media (max-width: $mobile-size) {
@@ -80,7 +87,6 @@
       }
     }
     
-  
     &__social-media {
       display: flex;
       flex-flow: row nowrap;

@@ -20,9 +20,14 @@
       font-weight: 300;
       position: absolute;
       top: 960px;
+      z-index: 2;
 
       &--highlighted {
         color: $blue-color;
+      }
+
+      @media (max-width: $mid-size){
+        width: 38rem;
       }
 
       @media (max-width: $mobile-size) {
@@ -38,17 +43,20 @@
       font-weight: 300;
       padding-bottom: 1rem;
 
+      @media (max-width: $mid-size){
+        font-size: 2.6rem;
+        padding-bottom: 0rem;
+        width: 50rem;
+      }
+
       @media (max-width: $tablet-size) {
-        width: 100vw;
         font-size: 2.5rem;
         padding-top: 1.5rem;
-        padding-bottom: 0.5rem;
       }
 
       @media (max-width: $mobile-size) {
         font-size: 1.3rem;
         padding-top: 0;
-        padding-bottom: 0;
       }
     }
   
@@ -64,7 +72,6 @@
 
       @media (max-width: $mobile-size) {
         font-size: 1rem;
-        padding-bottom: 0.5rem;
       }
     }
   
@@ -94,6 +101,7 @@
       height: 45rem;
       object-fit: scale-down;
       clip-path: circle(78.4% at 95% 38%);
+      z-index: 1;
 
         &:hover { 
           clip-path: none;
@@ -102,8 +110,7 @@
         }
       
         @media (max-width: $tablet-size) {
-          left: 50%;
-          z-index: -1;
+          left: 46%;
         }
 
         @media (max-width: $mobile-size) {

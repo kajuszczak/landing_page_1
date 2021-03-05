@@ -13,10 +13,13 @@
   background-attachment: fixed;
   align-items: flex-end;
 
+  @media (max-width: $mid-size){
+    align-items: center;
+  }
+
   @media (max-width: $tablet-size) {
     padding-top: 4rem;
     padding-bottom: 4rem;
-    align-items: center;
   }
 
   @media (max-width: $mobile-size) {
@@ -35,6 +38,10 @@
     &:hover {
       color: $blue-color;
       transition: all 0.3s ease-in-out;
+    }
+
+    @media (max-width: $mid-size){
+      font-size: 1.5rem;
     }
 
     @media (max-width: $tablet-size) {
@@ -56,6 +63,16 @@
     justify-content: space-between;
     list-style: none;
   }
+  
+  &__trigger-el {
+    display: none;
+
+    @media (max-width: $tablet-size) {
+      display: flex;
+      cursor: pointer;
+      font-size: 2rem;
+    }
+  }
 
   &__link {
     font-family: $sans-serif;
@@ -72,15 +89,15 @@
       transition: all 0.3s ease-in-out;
     }
 
-    @media (max-width: $tablet-size) {
-      font-size: 1rem;
-      min-width: 6rem;
-      margin-left: 1rem;
+    @media (max-width: $mid-size){
+      font-size: 1.2rem;
+      margin-left: 1.5rem;
     }
 
-    @media (max-width: $mobile-size) {
+    @media (max-width: $tablet-size) {
       display: none;
     }
+
   }
 
   &__paragraph {
