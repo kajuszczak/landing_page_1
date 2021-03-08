@@ -1,0 +1,126 @@
+// Logo and navigation
+
+.heading {
+  display: flex;
+  height: 45rem;
+  justify-content: space-between;
+  background-image: url(/img/background-header.webp);
+  background-size: cover;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  align-items: center;
+  flex-wrap: wrap;
+  background-attachment: fixed;
+  align-items: flex-end;
+
+  @media (max-width: $mid-size) {
+    align-items: center;
+  }
+
+  @media (max-width: $tablet-size) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (max-width: $mobile-size) {
+    height: 20rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  &__title {
+    font-family: $sans-serif;
+    font-size: 2rem;
+    color: $black;
+    cursor: pointer;
+    font-weight: $normal;
+
+    &:hover {
+      color: $blue-color;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media (max-width: $mid-size) {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: $tablet-size) {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: $mobile-size) {
+      font-size: 1rem;
+    }
+  }
+
+  &__navigation-container {
+    display: flex;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__trigger-el {
+    display: none;
+
+    @media (max-width: $tablet-size) {
+      display: flex;
+      cursor: pointer;
+      font-size: 2rem;
+    }
+  }
+
+  &__link {
+    font-family: $sans-serif;
+    font-size: 1.5rem;
+    color: $black;
+    font-weight: $normal;
+    display: block;
+    text-align: center;
+    min-width: 8rem;
+    margin-left: 3.5rem;
+
+    &:hover {
+      color: $blue-color;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media (max-width: $mid-size) {
+      font-size: 1.2rem;
+      margin-left: 1.5rem;
+    }
+
+    @media (max-width: $tablet-size) {
+      display: none;
+    }
+  }
+
+  &__paragraph {
+    font-size: 6rem;
+    font-family: $serif;
+    font-weight: $normal;
+    padding-top: 7.5rem;
+    line-height: 1.05;
+    cursor: default;
+
+    @media (max-width: $tablet-size) {
+      font-size: 4rem;
+      padding-top: 0;
+    }
+
+    @media (max-width: $mobile-size) {
+      font-size: 2.5rem;
+    }
+  }
+  &__active {
+    @media (max-width: $tablet-size) {
+      color: $blue-color;
+    }
+  }
+  &__active:hover {
+    color: $blue-color;
+    transition: all 0.3s ease-in-out;
+  }
+}

@@ -1,0 +1,19 @@
+.title-loop {
+  height: 45rem;
+  background-image: url(/img/fullsize-img.webp);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-attachment: fixed;
+
+  @media (max-width: $mobile-size) {
+    height: 20rem;
+    background-size: cover;
+    background-position-x: center;
+  }
+
+  &__placing {
+    margin-bottom: 8rem;
+  }
+}
