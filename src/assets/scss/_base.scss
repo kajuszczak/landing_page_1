@@ -1,7 +1,7 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -17,26 +17,29 @@ body {
 
 li {
   padding: 0;
+  list-style: none;
 }
 
 a {
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+
+  &:hover,
+  &:active {
     text-decoration: none;
-    transition: all 200ms ease-in-out;
-
-    &:hover,
-    &:active {
-      text-decoration: none;
-    }
   }
+}
 
-button:hover {
+button:hover,
+button:active {
   cursor: pointer;
+  outline: none;
 }
 
 .container {
   padding: 0 8rem;
 
-  @media (max-width: $mid-size){
+  @media (max-width: $mid-size) {
     padding: 0 6rem;
   }
 
@@ -47,4 +50,3 @@ button:hover {
     padding: 0 2rem;
   }
 }
-  

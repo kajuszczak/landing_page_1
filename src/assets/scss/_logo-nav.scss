@@ -13,7 +13,7 @@
   background-attachment: fixed;
   align-items: flex-end;
 
-  @media (max-width: $mid-size){
+  @media (max-width: $mid-size) {
     align-items: center;
   }
 
@@ -33,14 +33,14 @@
     font-size: 2rem;
     color: $black;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: $normal;
 
     &:hover {
       color: $blue-color;
       transition: all 0.3s ease-in-out;
     }
 
-    @media (max-width: $mid-size){
+    @media (max-width: $mid-size) {
       font-size: 1.5rem;
     }
 
@@ -54,16 +54,14 @@
   }
 
   &__navigation-container {
-  display: flex;
-  padding-right: 0;
+    display: flex;
   }
-  
+
   &__navigation {
     display: flex;
     justify-content: space-between;
-    list-style: none;
   }
-  
+
   &__trigger-el {
     display: none;
 
@@ -78,7 +76,7 @@
     font-family: $sans-serif;
     font-size: 1.5rem;
     color: $black;
-    font-weight: 500;
+    font-weight: $normal;
     display: block;
     text-align: center;
     min-width: 8rem;
@@ -89,7 +87,7 @@
       transition: all 0.3s ease-in-out;
     }
 
-    @media (max-width: $mid-size){
+    @media (max-width: $mid-size) {
       font-size: 1.2rem;
       margin-left: 1.5rem;
     }
@@ -97,13 +95,12 @@
     @media (max-width: $tablet-size) {
       display: none;
     }
-
   }
 
   &__paragraph {
     font-size: 6rem;
     font-family: $serif;
-    font-weight: 500;
+    font-weight: $normal;
     padding-top: 7.5rem;
     line-height: 1.05;
     cursor: default;
