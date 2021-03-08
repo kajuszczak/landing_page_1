@@ -1,16 +1,37 @@
+const debounce = (func, wait) => {
+    let timeout;
+  
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+  
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  };
+
+  
+
 // nested menu
+
 const nestedMenu = document.querySelector(".heading__navigation");
 const menuTriggerEl = document.querySelector(".heading__trigger-el");
 const headingTitle = document.querySelector(".heading__title");
+
+const menuOnScroll = debounce(function() {
+    nestedMenu.classList.remove("heading__navigation--open");
+}, 30);
   
-menuTriggerEl.addEventListener("mouseover", function() {
-    nestedMenu.style.display = "flex";
-    // headingTitle.style.display = "none";
+window.addEventListener('scroll', menuOnScroll);
+
+menuTriggerEl.addEventListener("click", function() {
+    nestedMenu.classList.toggle("heading__navigation--open");
+    
 });
   
-nestedMenu.addEventListener("mouseout", function() {
-    this.style.display = "none";
-});
+
 
 // gallery - text slider
 

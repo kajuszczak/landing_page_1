@@ -97,6 +97,49 @@ button:active {
   display: flex;
 }
 
+.heading__trigger-el {
+  position: fixed;
+  opacity: 0.6;
+  top: 50px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.heading__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #121212;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  height: 2px;
+  width: 100%;
+  position: relative;
+}
+
+.heading__icon::before,
+.heading__icon::after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: -8px;
+  background-color: #121212;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  left: 0;
+}
+
+.heading__icon::after {
+  top: 8px;
+  right: 0;
+  left: auto;
+}
+
 .heading__navigation {
   display: none;
   width: 40rem;
@@ -106,12 +149,34 @@ button:active {
           justify-content: space-between;
 }
 
-.heading__trigger-el {
+.heading__navigation--open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 2rem;
-  opacity: 0.6;
+}
+
+.heading__navigation--open + .heading__trigger-el .heading__icon {
+  background-color: transparent;
+}
+
+.heading__navigation--open + .heading__trigger-el .heading__icon::before,
+.heading__navigation--open + .heading__trigger-el .heading__icon::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: auto;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+}
+
+.heading__navigation--open + .heading__trigger-el .heading__icon::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .heading__link {
@@ -119,10 +184,11 @@ button:active {
   font-size: 1.5rem;
   color: #121212;
   font-weight: 400;
-  display: block;
   text-align: center;
   min-width: 8rem;
   margin-left: 3.5rem;
+  position: fixed;
+  display: block;
 }
 
 .heading__link:hover {
@@ -740,14 +806,6 @@ button:active {
 
   .heading__title {
     font-size: 1.2rem;
-  }
-
-  .heading__trigger-el {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    cursor: pointer;
-    font-size: 2rem;
   }
 
   .heading__link {
