@@ -38,6 +38,11 @@ a:active {
   text-decoration: none;
 }
 
+input,
+textarea {
+  outline: none;
+}
+
 button:hover,
 button:active {
   cursor: pointer;
@@ -93,16 +98,20 @@ button:active {
 }
 
 .heading__navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+  width: 40rem;
+  border: 1px solid red;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .heading__trigger-el {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  opacity: 0.6;
 }
 
 .heading__link {
@@ -652,6 +661,7 @@ button:active {
 
   .about-me__text {
     width: 38rem;
+    top: 0;
   }
 
   .about-me__heading {
@@ -753,6 +763,10 @@ button:active {
     color: #9ec8c8;
   }
 
+  .about-me__text {
+    top: 200px;
+  }
+
   .about-me__heading {
     font-size: 2.5rem;
     padding-top: 1.5rem;
@@ -840,7 +854,7 @@ button:active {
   }
 
   .about-me__text {
-    top: 330px;
+    top: 0;
   }
 
   .about-me__heading {
@@ -859,7 +873,6 @@ button:active {
   }
 
   .about-me__photo {
-    top: 320px;
     height: 20rem;
     width: auto;
     left: 58%;

@@ -30,6 +30,11 @@ a {
   }
 }
 
+input,
+textarea {
+  outline: none;
+}
+
 button:hover,
 button:active {
   cursor: pointer;

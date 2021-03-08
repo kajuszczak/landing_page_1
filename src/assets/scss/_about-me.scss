@@ -28,10 +28,15 @@
 
     @media (max-width: $mid-size) {
       width: 38rem;
+      top: 0;
+    }
+
+    @media (max-width: $tablet-size) {
+      top: 200px;
     }
 
     @media (max-width: $mobile-size) {
-      top: 330px;
+      top: 0;
     }
   }
 
@@ -113,7 +118,6 @@
     }
 
     @media (max-width: $mobile-size) {
-      top: 320px;
       height: 20rem;
       width: auto;
       left: 58%;

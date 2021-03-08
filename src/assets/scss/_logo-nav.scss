@@ -58,12 +58,16 @@
   }
 
   &__navigation {
-    display: flex;
+    display: none;
+    width: 40rem;
+    border: 1px solid red;
     justify-content: space-between;
   }
 
   &__trigger-el {
-    display: none;
+    display: flex;
+    font-size: 2rem;
+    opacity: 0.6;
 
     @media (max-width: $tablet-size) {
       display: flex;
