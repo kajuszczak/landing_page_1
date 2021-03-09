@@ -1281,7 +1281,7 @@ var headingTitle = document.querySelector(".heading__title");
 var menuOnScroll = debounce(function () {
   nestedMenu.classList.remove("heading__navigation--open");
 }, 30);
-window.addEventListener('scroll', menuOnScroll);
+window.addEventListener("scroll", menuOnScroll);
 menuTriggerEl.addEventListener("click", function () {
   nestedMenu.classList.toggle("heading__navigation--open");
 }); // gallery - text slider
@@ -1290,7 +1290,40 @@ var galleryBtn1 = document.querySelector(".gallery__btn1");
 var galleryBtn2 = document.querySelector(".gallery__btn2");
 var galleryBtn3 = document.querySelector(".gallery__btn3");
 var galleryText = document.querySelector(".gallery__element");
-var galleryTextVisible = document.querySelector(".gallery__element--visible"); // gallery - photo slider
+var galleryText1 = document.querySelector(".gallery__element1");
+var galleryText2 = document.querySelector(".gallery__element2");
+var galleryText3 = document.querySelector(".gallery__element3");
+
+function text1Visible() {
+  galleryText1.classList.add("gallery__element--visible");
+  galleryBtn1.classList.add("gallery__btn--active");
+  galleryText2.classList.remove("gallery__element--visible");
+  galleryText3.classList.remove("gallery__element--visible");
+  galleryBtn2.classList.remove("gallery__btn--active");
+  galleryBtn3.classList.remove("gallery__btn--active");
+}
+
+function text2Visible() {
+  galleryText2.classList.add("gallery__element--visible");
+  galleryBtn2.classList.add("gallery__btn--active");
+  galleryText1.classList.remove("gallery__element--visible");
+  galleryText3.classList.remove("gallery__element--visible");
+  galleryBtn1.classList.remove("gallery__btn--active");
+  galleryBtn3.classList.remove("gallery__btn--active");
+}
+
+function text3Visible() {
+  galleryText3.classList.add("gallery__element--visible");
+  galleryBtn3.classList.add("gallery__btn--active");
+  galleryText1.classList.remove("gallery__element--visible");
+  galleryText2.classList.remove("gallery__element--visible");
+  galleryBtn1.classList.remove("gallery__btn--active");
+  galleryBtn2.classList.remove("gallery__btn--active");
+}
+
+galleryBtn1.addEventListener("click", text1Visible);
+galleryBtn2.addEventListener("click", text2Visible);
+galleryBtn3.addEventListener("click", text3Visible); // gallery - photo slider
 // contact form
 //go-up button
 

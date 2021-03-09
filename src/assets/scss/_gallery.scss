@@ -32,18 +32,20 @@
   }
 
   &__btn {
-    height: 0.5rem;
+    height: 0.7rem;
     width: 4rem;
     outline: none;
     border-style: none;
     background-color: $grey-btn-color;
 
-    &:hover,
-    &:active,
-    &:focus {
+    &:hover {
       background-color: $blue-color;
       outline: none;
       border-style: none;
+    }
+
+    &--active {
+      background-color: $blue-color;
     }
 
     @media (max-width: $mobile-size) {

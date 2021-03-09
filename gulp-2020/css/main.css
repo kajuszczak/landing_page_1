@@ -63,17 +63,14 @@ button:active {
           justify-content: space-between;
   background-image: url(/img/background-header.webp);
   background-size: cover;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-attachment: fixed;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 
 .heading__title {
@@ -82,10 +79,13 @@ button:active {
   color: #121212;
   cursor: pointer;
   font-weight: 400;
+  border-bottom: 2px solid #9ec8c8;
+  border-spacing: 2px;
 }
 
 .heading__title:hover {
   color: #9ec8c8;
+  border-bottom: none;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -95,13 +95,12 @@ button:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 2;
 }
 
 .heading__trigger-el {
   position: fixed;
   opacity: 0.6;
-  top: 50px;
-  right: 50px;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -143,7 +142,6 @@ button:active {
 .heading__navigation {
   display: none;
   width: 40rem;
-  border: 1px solid red;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -153,6 +151,9 @@ button:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: fixed;
+  left: 48%;
+  top: 5rem;
 }
 
 .heading__navigation--open + .heading__trigger-el .heading__icon {
@@ -171,6 +172,7 @@ button:active {
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
+  background-color: #9ec8c8;
 }
 
 .heading__navigation--open + .heading__trigger-el .heading__icon::after {
@@ -187,8 +189,6 @@ button:active {
   text-align: center;
   min-width: 8rem;
   margin-left: 3.5rem;
-  position: fixed;
-  display: block;
 }
 
 .heading__link:hover {
@@ -202,7 +202,7 @@ button:active {
   font-size: 6rem;
   font-family: "Rozha One";
   font-weight: 400;
-  padding-top: 7.5rem;
+  padding-top: 12rem;
   line-height: 1.05;
   cursor: default;
 }
@@ -449,19 +449,21 @@ button:active {
 }
 
 .gallery__btn {
-  height: 0.5rem;
+  height: 0.7rem;
   width: 4rem;
   outline: none;
   border-style: none;
   background-color: #c4c4c4;
 }
 
-.gallery__btn:hover,
-.gallery__btn:active,
-.gallery__btn:focus {
+.gallery__btn:hover {
   background-color: #9ec8c8;
   outline: none;
   border-style: none;
+}
+
+.gallery__btn--active {
+  background-color: #9ec8c8;
 }
 
 .gallery__photo {
