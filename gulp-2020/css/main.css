@@ -467,6 +467,9 @@ button:active {
 }
 
 .gallery__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-left: 20rem;
 }
 

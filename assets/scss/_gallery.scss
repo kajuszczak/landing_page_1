@@ -54,6 +54,7 @@
   }
 
   &__photo {
+    display: flex;
     margin-left: 20rem;
 
     @media (max-width: $mid-size) {
