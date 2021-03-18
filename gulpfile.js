@@ -1,5 +1,5 @@
 const distDir = require('path').basename(__dirname)
-const srcDir = 'src'
+const srcDir = '.'
 
 const fs = require('fs')
 

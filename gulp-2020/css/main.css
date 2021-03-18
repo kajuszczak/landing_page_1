@@ -467,10 +467,13 @@ button:active {
 }
 
 .gallery__photo {
+  margin-left: 20rem;
+}
+
+.gallery__photo-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 20rem;
 }
 
 .gallery__photo-element {

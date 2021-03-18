@@ -74,6 +74,12 @@ galleryBtn3.addEventListener("click", text3Visible);
 
 // gallery - photo slider
 
+
+
+
+
+
+
 // contact form
 
 //go-up button

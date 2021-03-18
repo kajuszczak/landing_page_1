@@ -81,10 +81,148 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./js/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./js/base.js":
+/*!********************!*\
+  !*** ./js/base.js ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function testWebP(callback) {
+  var webP = new Image();
+
+  webP.onload = webP.onerror = function () {
+    callback(webP.height == 2);
+  };
+
+  webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+}
+
+testWebP(function (support) {
+  if (support == true) {
+    document.querySelector('body').classList.add('webp');
+  } else {
+    document.querySelector('body').classList.add('no-webp');
+  }
+});
+
+/***/ }),
+
+/***/ "./js/index.js":
+/*!*********************!*\
+  !*** ./js/index.js ***!
+  \*********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./base */ "./js/base.js");
+/* harmony import */ var _base__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_base__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _landingpage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./landingpage */ "./js/landingpage.js");
+
+
+
+/***/ }),
+
+/***/ "./js/landingpage.js":
+/*!***************************!*\
+  !*** ./js/landingpage.js ***!
+  \***************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.timers.js */ "./node_modules/core-js/modules/web.timers.js");
+/* harmony import */ var core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var debounce = function debounce(func, wait) {
+  var timeout;
+  return function executedFunction() {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    var later = function later() {
+      clearTimeout(timeout);
+      func.apply(void 0, args);
+    };
+
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}; // nested menu
+
+
+var nestedMenu = document.querySelector(".heading__navigation");
+var menuTriggerEl = document.querySelector(".heading__trigger-el");
+var headingTitle = document.querySelector(".heading__title");
+var menuOnScroll = debounce(function () {
+  nestedMenu.classList.remove("heading__navigation--open");
+}, 30);
+window.addEventListener("scroll", menuOnScroll);
+menuTriggerEl.addEventListener("click", function () {
+  nestedMenu.classList.toggle("heading__navigation--open");
+}); // gallery - text slider
+
+var galleryBtn1 = document.querySelector(".gallery__btn1");
+var galleryBtn2 = document.querySelector(".gallery__btn2");
+var galleryBtn3 = document.querySelector(".gallery__btn3");
+var galleryText = document.querySelector(".gallery__element");
+var galleryText1 = document.querySelector(".gallery__element1");
+var galleryText2 = document.querySelector(".gallery__element2");
+var galleryText3 = document.querySelector(".gallery__element3");
+
+function text1Visible() {
+  galleryText1.classList.add("gallery__element--visible");
+  galleryBtn1.classList.add("gallery__btn--active");
+  galleryText2.classList.remove("gallery__element--visible");
+  galleryText3.classList.remove("gallery__element--visible");
+  galleryBtn2.classList.remove("gallery__btn--active");
+  galleryBtn3.classList.remove("gallery__btn--active");
+}
+
+function text2Visible() {
+  galleryText2.classList.add("gallery__element--visible");
+  galleryBtn2.classList.add("gallery__btn--active");
+  galleryText1.classList.remove("gallery__element--visible");
+  galleryText3.classList.remove("gallery__element--visible");
+  galleryBtn1.classList.remove("gallery__btn--active");
+  galleryBtn3.classList.remove("gallery__btn--active");
+}
+
+function text3Visible() {
+  galleryText3.classList.add("gallery__element--visible");
+  galleryBtn3.classList.add("gallery__btn--active");
+  galleryText1.classList.remove("gallery__element--visible");
+  galleryText2.classList.remove("gallery__element--visible");
+  galleryBtn1.classList.remove("gallery__btn--active");
+  galleryBtn2.classList.remove("gallery__btn--active");
+}
+
+galleryBtn1.addEventListener("click", text1Visible);
+galleryBtn2.addEventListener("click", text2Visible);
+galleryBtn3.addEventListener("click", text3Visible); // gallery - photo slider
+// contact form
+//go-up button
+
+var goUpBtn = document.querySelector(".info__up-icon");
+goUpBtn.addEventListener("click", function () {
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: "smooth"
+  });
+});
+
+/***/ }),
 
 /***/ "./node_modules/core-js/internals/an-object.js":
 /*!*****************************************************!*\
@@ -1197,144 +1335,6 @@ try {
 
 module.exports = g;
 
-
-/***/ }),
-
-/***/ "./src/js/base.js":
-/*!************************!*\
-  !*** ./src/js/base.js ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function testWebP(callback) {
-  var webP = new Image();
-
-  webP.onload = webP.onerror = function () {
-    callback(webP.height == 2);
-  };
-
-  webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
-
-testWebP(function (support) {
-  if (support == true) {
-    document.querySelector('body').classList.add('webp');
-  } else {
-    document.querySelector('body').classList.add('no-webp');
-  }
-});
-
-/***/ }),
-
-/***/ "./src/js/index.js":
-/*!*************************!*\
-  !*** ./src/js/index.js ***!
-  \*************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./base */ "./src/js/base.js");
-/* harmony import */ var _base__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_base__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _landingpage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./landingpage */ "./src/js/landingpage.js");
-
-
-
-/***/ }),
-
-/***/ "./src/js/landingpage.js":
-/*!*******************************!*\
-  !*** ./src/js/landingpage.js ***!
-  \*******************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.timers.js */ "./node_modules/core-js/modules/web.timers.js");
-/* harmony import */ var core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_0__);
-
-
-var debounce = function debounce(func, wait) {
-  var timeout;
-  return function executedFunction() {
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    var later = function later() {
-      clearTimeout(timeout);
-      func.apply(void 0, args);
-    };
-
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}; // nested menu
-
-
-var nestedMenu = document.querySelector(".heading__navigation");
-var menuTriggerEl = document.querySelector(".heading__trigger-el");
-var headingTitle = document.querySelector(".heading__title");
-var menuOnScroll = debounce(function () {
-  nestedMenu.classList.remove("heading__navigation--open");
-}, 30);
-window.addEventListener("scroll", menuOnScroll);
-menuTriggerEl.addEventListener("click", function () {
-  nestedMenu.classList.toggle("heading__navigation--open");
-}); // gallery - text slider
-
-var galleryBtn1 = document.querySelector(".gallery__btn1");
-var galleryBtn2 = document.querySelector(".gallery__btn2");
-var galleryBtn3 = document.querySelector(".gallery__btn3");
-var galleryText = document.querySelector(".gallery__element");
-var galleryText1 = document.querySelector(".gallery__element1");
-var galleryText2 = document.querySelector(".gallery__element2");
-var galleryText3 = document.querySelector(".gallery__element3");
-
-function text1Visible() {
-  galleryText1.classList.add("gallery__element--visible");
-  galleryBtn1.classList.add("gallery__btn--active");
-  galleryText2.classList.remove("gallery__element--visible");
-  galleryText3.classList.remove("gallery__element--visible");
-  galleryBtn2.classList.remove("gallery__btn--active");
-  galleryBtn3.classList.remove("gallery__btn--active");
-}
-
-function text2Visible() {
-  galleryText2.classList.add("gallery__element--visible");
-  galleryBtn2.classList.add("gallery__btn--active");
-  galleryText1.classList.remove("gallery__element--visible");
-  galleryText3.classList.remove("gallery__element--visible");
-  galleryBtn1.classList.remove("gallery__btn--active");
-  galleryBtn3.classList.remove("gallery__btn--active");
-}
-
-function text3Visible() {
-  galleryText3.classList.add("gallery__element--visible");
-  galleryBtn3.classList.add("gallery__btn--active");
-  galleryText1.classList.remove("gallery__element--visible");
-  galleryText2.classList.remove("gallery__element--visible");
-  galleryBtn1.classList.remove("gallery__btn--active");
-  galleryBtn2.classList.remove("gallery__btn--active");
-}
-
-galleryBtn1.addEventListener("click", text1Visible);
-galleryBtn2.addEventListener("click", text2Visible);
-galleryBtn3.addEventListener("click", text3Visible); // gallery - photo slider
-// contact form
-//go-up button
-
-var goUpBtn = document.querySelector(".info__up-icon");
-goUpBtn.addEventListener("click", function () {
-  window.scroll({
-    top: 0,
-    left: 0,
-    behavior: "smooth"
-  });
-});
 
 /***/ })
 

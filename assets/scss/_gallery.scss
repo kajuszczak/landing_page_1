@@ -54,7 +54,6 @@
   }
 
   &__photo {
-    display: flex;
     margin-left: 20rem;
 
     @media (max-width: $mid-size) {
@@ -64,7 +63,8 @@
   }
 
   &__photo-container {
-
+    display: flex;
+    
     @media (max-width: $mid-size) {
       margin-bottom: 4rem;
     }
