@@ -209,9 +209,44 @@ function text3Visible() {
 
 galleryBtn1.addEventListener("click", text1Visible);
 galleryBtn2.addEventListener("click", text2Visible);
-galleryBtn3.addEventListener("click", text3Visible); // gallery - photo slider
-// contact form
-//go-up button
+galleryBtn3.addEventListener("click", text3Visible); // contact form
+
+var inputEmail = document.querySelector(".contact__email");
+var inputMsg = document.querySelector(".contact__msg");
+var sendBtn = document.querySelector(".contact__btn");
+var emailInfo = document.querySelector(".contact__email-info");
+var msgInfo = document.querySelector(".contact__msg-info");
+var sentInfo = document.querySelector(".contact__sent-info");
+
+function emailValid() {
+  if (validateEmail(inputEmail.value)) {
+    emailInfo.textContent = "";
+  } else {
+    emailInfo.textContent = "pole nie może być puste";
+  }
+}
+
+function msgValid() {
+  if (inputMsg.value === "") {
+    msgInfo.textContent = "pole nie może być puste";
+  }
+}
+
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+sendBtn.addEventListener("click", emailValid);
+sendBtn.addEventListener("click", msgValid); //contact form info icon-exit
+
+var exitIcon = document.querySelector(".contact__sent-info__icon");
+
+function exitInfo() {
+  sentInfo.classList.add("contact__sent-info--disabled");
+}
+
+exitIcon.addEventListener("click", exitInfo); //go-up button
 
 var goUpBtn = document.querySelector(".info__up-icon");
 goUpBtn.addEventListener("click", function () {

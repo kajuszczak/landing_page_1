@@ -107,12 +107,6 @@
     clip-path: circle(78.4% at 95% 38%);
     z-index: 1;
 
-    &:hover {
-      clip-path: none;
-      transition: all 10s ease-in-out;
-      transition-delay: 20s;
-    }
-
     @media (max-width: $tablet-size) {
       left: 46%;
     }

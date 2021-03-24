@@ -92,7 +92,7 @@
 
     <!-- Quote section -->
     <section class="quote container">
-      <blockquote class="quote__text">
+      <blockquote class="quote__text ">
         „Nie można być architektem bez ciągłego i pełnego pokory badania
         rzeczywistości, bez rozmów z osobami, które będą mieszkać w danym
         miejscu. Budynek nie jest ozdobą – prowadzi ciągły dialog z otoczeniem.
@@ -269,12 +269,17 @@
 
     <!-- Contact form -->
     <section class="contact" id="contact">
+      <div class="contact__sent-info">
+        <ion-icon  class="contact__sent-info__icon" name="close-outline"></ion-icon>
+        <span class="contact__sent-info__p">Wiadomość została wysłana</span>
+      </div>
       <h6 class="contact__heading">Napisz do mnie</h6>
       <form class="contact__form">
         <input
           class="contact__email"
           type="email"
           placeholder="wpisz swój adres email"
+          required
         />
         <p class="contact__email-info"></p>
         <textarea
@@ -283,9 +288,10 @@
           rows="4"
           cols="50"
           placeholder="wpisz treść wiadomości"
+          required
         ></textarea>
-        <button class="contact__btn">Wyślij</button>
         <p class="contact__msg-info"></p>
+        <button class="contact__btn">Wyślij</button>
       </form>
     </section>
 
@@ -358,15 +364,15 @@
       $(document).ready(function () {
         $(".gallery__photo-container").slick({
           centerMode: true,
-          centerPadding: "160px",
+          centerPadding: "48rem",
           slidesToShow: 3,
           responsive: [
             {
-              breakpoint: 768,
+              breakpoint: 1000,
               settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: "160px",
+                centerPadding: "48rem",
                 slidesToShow: 3,
               },
             },
@@ -375,7 +381,7 @@
               settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: "160px",
+                centerPadding: "48rem",
                 slidesToShow: 1,
               },
             },
