@@ -179,7 +179,6 @@
         </li>
       </ul>
       <div class="gallery__photo">
-        <div class="gallery__photo-container">
           <div class="gallery__photo-container">
             <picture>
               <source srcset="./img/architecture1.webp" type="image/webp" />
@@ -213,9 +212,9 @@
               />
             </picture>
           </div>
-        </div>
+        
 
-        <!-- <li class="gallery__photo-container">
+        <li class="gallery__photo-container">
           <picture>
             <source srcset="./img/architecture1.webp" type="image/webp" />
             <source srcset="./img/architecture1.jpg" type="image/jpeg" />
@@ -247,8 +246,8 @@
               alt="Library project"
             />
           </picture>
-        </li> -->
-      </div>
+        </li>
+      
       <div class="gallery__buttons">
         <ul class="gallery__btn-container">
           <button
@@ -360,35 +359,6 @@
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".gallery__photo-container").slick({
-          centerMode: true,
-          centerPadding: "48rem",
-          slidesToShow: 3,
-          responsive: [
-            {
-              breakpoint: 1000,
-              settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: "48rem",
-                slidesToShow: 3,
-              },
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: "48rem",
-                slidesToShow: 1,
-              },
-            },
-          ],
-        });
-      });
-    </script>
     <script src="js/script.js"></script>
   </body>
 </html>

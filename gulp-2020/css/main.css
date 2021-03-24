@@ -451,6 +451,9 @@ button:focus {
   background-color: #9ec8c8;
   outline: none;
   border-style: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .gallery__btn--active {
@@ -522,9 +525,17 @@ button:focus {
   display: none;
   top: 1rem;
   left: 10%;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .gallery__element--visible {
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -646,6 +657,28 @@ button:focus {
   right: 0.5rem;
   padding: 1rem;
   cursor: pointer;
+  -webkit-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+}
+
+.contact__sent-info__icon:hover {
+  color: #9ec8c8;
+  -webkit-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
 }
 
 .contact__sent-info--disabled {
@@ -674,6 +707,17 @@ button:focus {
           justify-content: center;
   width: 20rem;
   height: 2rem;
+  margin-top: 0;
+  -webkit-transition: margin-bottom 0.3s ease-in-out;
+  -o-transition: margin-bottom 0.3s ease-in-out;
+  transition: margin-bottom 0.3s ease-in-out;
+}
+
+.info__go-up:hover {
+  margin-bottom: 1.5rem;
+  -webkit-transition: margin-bottom 0.3s ease-in-out;
+  -o-transition: margin-bottom 0.3s ease-in-out;
+  transition: margin-bottom 0.3s ease-in-out;
 }
 
 .info__up-icon {

@@ -42,6 +42,7 @@
       background-color: $blue-color;
       outline: none;
       border-style: none;
+      transition: all 0.3s ease-in-out;
     }
 
     &--active {
@@ -129,6 +130,7 @@
     width: 20rem;
     padding-top: 6rem;
 
+
     @media (max-width: $mobile-size) {
       width: 16rem;
     }
@@ -184,8 +186,12 @@
     display: none;
     top: 1rem;
     left: 10%;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
 
     &--visible {
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
       display: flex;
       justify-content: space-between;
       align-items: center;
