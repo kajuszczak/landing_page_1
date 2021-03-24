@@ -1,42 +1,41 @@
 $(document).ready(function () {
-const debounce = (func, wait) => {
-  let timeout;
+    const debounce = (func, wait) => {
+        let timeout;
 
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
     };
-
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-};
 
 // nested menu
 
-const nestedMenu = document.querySelector(".heading__navigation");
-const menuTriggerEl = document.querySelector(".heading__trigger-el");
-const headingTitle = document.querySelector(".heading__title");
+    const nestedMenu = document.querySelector(".heading__navigation");
+    const menuTriggerEl = document.querySelector(".heading__trigger-el");
+    const headingTitle = document.querySelector(".heading__title");
 
-const menuOnScroll = debounce(function () {
-  nestedMenu.classList.remove("heading__navigation--open");
-}, 30);
+    const menuOnScroll = debounce(function () {
+        nestedMenu.classList.remove("heading__navigation--open");
+    }, 30);
 
-window.addEventListener("scroll", menuOnScroll);
+    window.addEventListener("scroll", menuOnScroll);
 
-menuTriggerEl.addEventListener("click", function () {
-  nestedMenu.classList.toggle("heading__navigation--open");
-});
+    menuTriggerEl.addEventListener("click", function () {
+        nestedMenu.classList.toggle("heading__navigation--open");
+    });
 
 // gallery - text slider
 
 
-  $(".gallery__photo").slick({
-    centerMode: true,
-    slidesToShow: 1,
-    autoplay: true,
-  });
+    $(".gallery__photo").slick({
+            slidesToShow: 1,
+        autoplay: true,
+    });
 
 
 // const galleryBtn1 = document.querySelector(".gallery__btn1");
@@ -128,14 +127,14 @@ menuTriggerEl.addEventListener("click", function () {
 
 //go-up button
 
-const goUpBtn = document.querySelector(".info__up-icon");
+    const goUpBtn = document.querySelector(".info__up-icon");
 
 
-goUpBtn.addEventListener("click", function () {
-  window.scroll({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
-  });
-});
+    goUpBtn.addEventListener("click", function () {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+        });
+    });
 });
