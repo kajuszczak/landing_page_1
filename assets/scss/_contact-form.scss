@@ -54,6 +54,7 @@
     border-style: none;
     font-family: $sans-serif;
     resize: none;
+    margin-bottom: 2rem;
 
     @media (max-width: $mobile-size) {
       width: 20rem;
@@ -74,11 +75,14 @@
     height: 4rem;
     border-style: none;
     background: none;
-    margin-top: 1rem;
+    padding-bottom: 0;
+    transition: padding-bottom 0.3s ease-in-out;
 
     &:hover,
     &:active {
       color: $blue-color;
+      padding-bottom: 1.5rem;
+      transition: padding-bottom 0.3s ease-in-out;
     }
 
     @media (max-width: $mobile-size) {

@@ -210,9 +210,9 @@ button:focus {
 
 .heading__active:hover {
   color: #9ec8c8;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .about-me {
@@ -373,14 +373,17 @@ button:focus {
   font-family: "Rozha One";
   font-size: 2.5rem;
   padding-bottom: 4rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .quote__text:hover {
   color: #9ec8c8;
   font-style: italic;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor: default;
 }
 
@@ -461,16 +464,9 @@ button:focus {
 }
 
 .gallery__photo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 20rem;
-}
-
-.gallery__photo-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-left: auto;
+  position: absolute;
+  left: 30rem;
 }
 
 .gallery__photo-element {
@@ -478,7 +474,6 @@ button:focus {
   height: 27rem;
   -o-object-fit: cover;
      object-fit: cover;
-  padding-left: 4rem;
 }
 
 .gallery__text-container {
@@ -547,6 +542,29 @@ button:focus {
           align-items: center;
 }
 
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: -30rem;
+  list-style-type: none;
+}
+
+.slick-dots button {
+  display: block;
+  width: 4rem;
+  height: 0.5rem;
+  border: none;
+  margin-right: 2rem;
+  text-indent: -9999px;
+  background-color: #c4c4c4;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #9ec8c8;
+}
+
 .contact {
   height: 30rem;
   display: -webkit-box;
@@ -603,6 +621,7 @@ button:focus {
   border-style: none;
   font-family: "Montserrat";
   resize: none;
+  margin-bottom: 2rem;
 }
 
 .contact__msg-info,
@@ -619,12 +638,19 @@ button:focus {
   height: 4rem;
   border-style: none;
   background: none;
-  margin-top: 1rem;
+  padding-bottom: 0;
+  -webkit-transition: padding-bottom 0.3s ease-in-out;
+  -o-transition: padding-bottom 0.3s ease-in-out;
+  transition: padding-bottom 0.3s ease-in-out;
 }
 
 .contact__btn:hover,
 .contact__btn:active {
   color: #9ec8c8;
+  padding-bottom: 1.5rem;
+  -webkit-transition: padding-bottom 0.3s ease-in-out;
+  -o-transition: padding-bottom 0.3s ease-in-out;
+  transition: padding-bottom 0.3s ease-in-out;
 }
 
 .contact__sent-info {
@@ -832,9 +858,6 @@ button:focus {
   }
 
   .gallery__photo {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     margin-left: 0;
   }
 

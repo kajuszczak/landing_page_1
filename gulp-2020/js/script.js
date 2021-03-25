@@ -143,9 +143,15 @@ $(document).ready(function () {
   }); // gallery - text slider
 
   $(".gallery__photo").slick({
-    centerMode: true,
-    slidesToShow: 1,
-    autoplay: true
+    slideToShow: 1,
+    // infinite: true,
+    dots: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,
+    fadeSpeed: 1000,
+    cssEase: 'linear'
   }); // const galleryBtn1 = document.querySelector(".gallery__btn1");
   // const galleryBtn2 = document.querySelector(".gallery__btn2");
   // const galleryBtn3 = document.querySelector(".gallery__btn3");
@@ -181,37 +187,47 @@ $(document).ready(function () {
   // galleryBtn2.addEventListener("click", text2Visible);
   // galleryBtn3.addEventListener("click", text3Visible);
   // contact form
-  // const inputEmail = document.querySelector(".contact__email");
-  // const inputMsg = document.querySelector(".contact__msg");
-  // const sendBtn = document.querySelector(".contact__btn");
-  // const emailInfo = document.querySelector(".contact__email-info");
-  // const msgInfo = document.querySelector(".contact__msg-info");
-  // const sentInfo = document.querySelector(".contact__sent-info");
-  // function emailValid() {
-  //   if(validateEmail(inputEmail.value)) {
-  //     emailInfo.textContent = "";
-  //   } else {
-  //     emailInfo.textContent = "pole nie może być puste";
-  //   }
-  // }
-  // function msgValid() {
-  //   if(inputMsg.value === "") {
-  //     msgInfo.textContent = "pole nie może być puste";
-  //   }
-  // }
-  // function validateEmail(email) {
-  //   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  //   return re.test(email);
-  // }
-  // sendBtn.addEventListener("click", emailValid);
-  // sendBtn.addEventListener("click", msgValid);
-  // //contact form info icon-exit
-  // const exitIcon = document.querySelector(".contact__sent-info__icon");
-  // function exitInfo() {
-  //   sentInfo.classList.add("contact__sent-info--disabled");
-  // }
-  // exitIcon.addEventListener("click", exitInfo);
-  //go-up button
+
+  var inputEmail = document.querySelector(".contact__email");
+  var inputMsg = document.querySelector(".contact__msg");
+  var sendBtn = document.querySelector(".contact__btn");
+  var emailInfo = document.querySelector(".contact__email-info");
+  var msgInfo = document.querySelector(".contact__msg-info");
+  var sentInfo = document.querySelector(".contact__sent-info");
+
+  function emailValid(e) {
+    if (validateEmail(inputEmail.value)) {
+      emailInfo.textContent = "";
+    } else {
+      emailInfo.textContent = "pole nie może być puste";
+    }
+
+    e.preventDefault();
+  }
+
+  function msgValid(e) {
+    if (inputMsg.value === "") {
+      msgInfo.textContent = "pole nie może być puste";
+    }
+
+    e.preventDefault();
+  }
+
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
+  sendBtn.addEventListener("click", emailValid);
+  sendBtn.addEventListener("click", msgValid); //contact form info icon-exit
+
+  var exitIcon = document.querySelector(".contact__sent-info__icon");
+
+  function exitInfo() {
+    sentInfo.classList.add("contact__sent-info--disabled");
+  }
+
+  exitIcon.addEventListener("click", exitInfo); //go-up button
 
   var goUpBtn = document.querySelector(".info__up-icon");
   goUpBtn.addEventListener("click", function () {

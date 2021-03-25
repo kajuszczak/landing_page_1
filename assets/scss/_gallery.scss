@@ -55,17 +55,17 @@
   }
 
   &__photo {
-    display: flex;
-    margin-left: 20rem;
+    margin-left: auto;
+    position: absolute;
+    left: 30rem;
 
     @media (max-width: $mid-size) {
-      align-items: center;
       margin-left: 0;
     }
   }
 
   &__photo-container {
-    display: flex;
+    
     
     @media (max-width: $mid-size) {
       margin-bottom: 4rem;
@@ -84,7 +84,6 @@
     width: 48rem;
     height: 27rem;
     object-fit: cover;
-    padding-left: 4rem;
 
     @media (max-width: $mid-size) {
       width: 44rem;
@@ -197,4 +196,28 @@
       align-items: center;
     }
   }
+}
+
+
+.slick-dots {
+  display: flex;
+  position: absolute;
+  left: -30rem;
+  list-style-type: none;
+  
+  button {
+    display: block;
+    width: 4rem;
+    height: 0.5rem;
+    border: none;
+    margin-right: 2rem;
+    text-indent: -9999px;
+    background-color: $grey-btn-color;
+  }
+
+  li.slick-active button {
+    background-color: $blue-color;
+
+  }
+
 }
