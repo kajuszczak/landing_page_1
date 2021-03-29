@@ -34,7 +34,7 @@ $(document).ready(function () {
 
     $(".gallery__photo").slick({
         slideToShow: 1,
-        // infinite: true,
+        infinite: true,
         dots: true,
         arrows: false,
         autoplay: true,

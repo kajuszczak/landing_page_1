@@ -1,4 +1,4 @@
-const distDir = require('path').basename(__dirname)
+const distDir = "./dist/"
 const srcDir = '.'
 
 const fs = require('fs')
@@ -9,20 +9,20 @@ const path = {
         css: `${distDir}/css/`,
         js: `${distDir}/js/`,
         img: `${distDir}/img/`,
-        fonts: `${distDir}/fonts/`,
+        
     },
     src: {
-        html: [`${srcDir}/*.html`, `!${srcDir}/_*.html`],
+        html: `${srcDir}/*.html`,
         css: `${srcDir}/assets/scss/main.scss`,
         js: `${srcDir}/js/index.js`,
-        img: srcDir + '/assets/img/**/*.+(png|jpg|svg|gif|ico|webp)',
-        fonts: `${srcDir}/assets/fonts/*.ttf`,
+        img: `${srcDir}/assets/img/**/*.+(png|jpg|svg|gif|ico|webp)`,
+        
     },
     watch: {
         html: `${srcDir}/**/*.html`,
         css: `${srcDir}/assets/scss/**/*.scss`,
         js: `${srcDir}/js/**/*.js`,
-        img: srcDir + '/assets/img/**/*.+(png|jpg|svg|gif|ico|webp)'
+        img: `${srcDir}/assets/img/**/*.+(png|jpg|svg|gif|ico|webp)`,
     },
     clean: `./${distDir}/`
 
@@ -40,13 +40,8 @@ const mqpacker = require('gulp-group-css-media-queries')
 const cleanCss = require('gulp-clean-css')
 const rename = require('gulp-rename')
 const imageMin = require('gulp-imagemin')
-const webp = require('gulp-webp')
-const webpHtml = require('gulp-webp-html')
-const webpCss = require('gulp-webp-css')
-const svgSprite = require('gulp-svg-sprite')
-const ttf2woff = require('gulp-ttf2woff')
-const ttf2woff2 = require('gulp-ttf2woff2')
-const fonter = require('gulp-fonter')
+
+
 
 function browsersync() {
     browserSync.init({
@@ -61,7 +56,6 @@ function browsersync() {
 function html() {
     return src(path.src.html)
         .pipe(fileInclude())
-        .pipe(webpHtml())
         .pipe(dest(path.build.html))
         .pipe(browserSync.stream())
 }
@@ -111,7 +105,7 @@ function css() {
                 overrideBrowserslist: ['last 5 versions'],
                 cascade: true
             }))
-        .pipe(webpCss())
+        
         .pipe(dest(path.build.css))
         .pipe(cleanCss())
         .pipe(
@@ -124,10 +118,6 @@ function css() {
 
 function images() {
     return src(path.src.img)
-        .pipe(webp({
-            quality: 70
-        }))
-        .pipe(dest(path.build.img))
         .pipe(src(path.src.img))
         .pipe(imageMin([
             imageMin.gifsicle({ interlaced: true }),
@@ -143,39 +133,6 @@ function images() {
         .pipe(browserSync.stream())
 }
 
-function fonts() {
-    src(path.src.fonts)
-        .pipe(ttf2woff())
-        .pipe(dest(path.build.fonts))
-    return src(path.src.fonts)
-        .pipe(ttf2woff2())
-        .pipe(dest(path.build.fonts))
-}
-
-function fontsStyle() {
-    let file_content = fs.readFileSync(srcDir + '/assets/scss/_fonts.scss');
-    if (file_content == '') {
-        fs.writeFile(srcDir + '/assets/scss/_fonts.scss', '', cb);
-        return fs.readdir(path.build.fonts, function (err, items) {
-            if (items) {
-                let c_fontname;
-                for (var i = 0; i < items.length; i++) {
-                    let fontname = items[i].split('.');
-                    fontname = fontname[0];
-                    if (c_fontname != fontname) {
-                        fs.appendFile(srcDir + '/assets/scss/_fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', cb);
-                    }
-                    c_fontname = fontname;
-                }
-            }
-        })
-    }
-}
-
-function cb() {
-
-}
-
 function watchFiles() {
     gulp.watch([path.watch.html], html)
     gulp.watch([path.watch.css], css)
@@ -186,27 +143,6 @@ function watchFiles() {
 function clean() {
     return del(path.clean)
 }
-
-gulp.task('svgSprite', function () {
-    return gulp.src([`${srcDir}/assets/img/svg/*.svg`])
-        .pipe(svgSprite({
-            mode: {
-                stack: {
-                    sprite: '../icons/icons.svg',
-                    example: true
-                }
-            }
-        }))
-        .pipe(dest(path.build.img))
-})
-
-gulp.task('otf', function () {
-    return src([`${srcDir}/assets/**/*.otf`])
-        .pipe(fonter({
-            formats: ['ttf']
-        }))
-        .pipe(dest(`${srcDir}/assets/fonts`))
-})
 
 gulp.task("build-prod-js", () => {
     return gulp.src(path.src.js)
@@ -236,12 +172,10 @@ gulp.task("build-prod-js", () => {
         .pipe(gulp.dest(path.build.js));
 });
 
-const build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle)
+const build = gulp.series(clean, gulp.parallel(js, css, html, images))
 const watch = gulp.parallel(build, watchFiles, browsersync)
 const clear = gulp.series(clean)
 
-exports.fontsStyle = fontsStyle
-exports.fonts = fonts
 exports.img = images
 exports.js = js
 exports.scss = scss

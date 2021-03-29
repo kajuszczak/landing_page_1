@@ -1157,30 +1157,3 @@ button:focus {
     height: 1.2rem;
   }
 }
-@supports (-webkit-appearance:none){
-
-}
-
- @media (max-width: 1315px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media (max-width: 768px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media (max-width: 415px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
