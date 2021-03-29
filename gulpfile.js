@@ -1,8 +1,6 @@
 const distDir = "./dist/"
 const srcDir = '.'
 
-const fs = require('fs')
-
 const path = {
     build: {
         html: `${distDir}/`,
@@ -32,11 +30,9 @@ const { src, dest } = require('gulp')
 const gulp = require('gulp')
 const webpack = require('webpack-stream')
 const browserSync = require('browser-sync').create()
-const fileInclude = require('gulp-file-include')
 const del = require('del')
 const scss = require('gulp-sass')
 const autoprefixer = require('gulp-autoprefixer')
-const mqpacker = require('gulp-group-css-media-queries')
 const cleanCss = require('gulp-clean-css')
 const rename = require('gulp-rename')
 const imageMin = require('gulp-imagemin')
@@ -55,7 +51,6 @@ function browsersync() {
 
 function html() {
     return src(path.src.html)
-        .pipe(fileInclude())
         .pipe(dest(path.build.html))
         .pipe(browserSync.stream())
 }
@@ -65,7 +60,7 @@ function js() {
         .pipe(webpack({
             mode: 'development',
             output: {
-                filename: 'script.js'
+                filename: 'index.js'
             },
             watch: false,
             devtool: "source-map",
@@ -99,14 +94,12 @@ function css() {
                 outputStyle: "expanded"
             })
         )
-        .pipe(mqpacker())
         .pipe(
             autoprefixer({
                 overrideBrowserslist: ['last 5 versions'],
                 cascade: true
             }))
         
-        .pipe(dest(path.build.css))
         .pipe(cleanCss())
         .pipe(
             rename({
@@ -118,7 +111,6 @@ function css() {
 
 function images() {
     return src(path.src.img)
-        .pipe(src(path.src.img))
         .pipe(imageMin([
             imageMin.gifsicle({ interlaced: true }),
             imageMin.mozjpeg({ progressive: true }),

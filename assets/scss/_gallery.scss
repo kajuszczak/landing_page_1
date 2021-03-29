@@ -55,17 +55,14 @@
   }
 
   &__photo {
-    margin-left: auto;
-    position: absolute;
-    left: 30rem;
+    width: 100%;
 
-    @media (max-width: $mid-size) {
-      margin-left: 0;
-    }
   }
 
   &__photo-container {
-    
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
     
     @media (max-width: $mid-size) {
       margin-bottom: 4rem;
@@ -84,6 +81,10 @@
     width: 48rem;
     height: 27rem;
     object-fit: cover;
+    transform: scale(0.9);
+    transition: transform 1s ease-in-out, opacity 0.2s ease-in-out;
+    transform-origin: center;
+    opacity: 0;
 
     @media (max-width: $mid-size) {
       width: 44rem;
@@ -101,37 +102,28 @@
     }
   }
 
-  &__text-container {
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
 
-    @media (max-width: $mid-size) {
-      position: absolute;
-      left: 40%;
-      margin-top: 19.5rem;
-    }
 
-    @media (max-width: $tablet-size) {
-      left: 30%;
-      margin-top: 17rem;
-    }
-
+  &__text-elements {
+    width: 20rem;
+    transform: translateX(-100%);
+    transition: transform 0.5s, opacity 0.2s;
+    opacity: 0;
+  
     @media (max-width: $mobile-size) {
-      left: 12%;
-      margin-top: 9rem;
+      width: 16rem;
     }
   }
 
-  &__text-elements {
-    flex-direction: column;
-    width: 20rem;
-    padding-top: 6rem;
+  .slick-active {
+    .gallery__text-elements {
+      transform: translateX(0);
+      opacity: 1;
+    }
 
-
-    @media (max-width: $mobile-size) {
-      width: 16rem;
+    .gallery__photo-element {
+      transform: scale(1);
+      opacity: 1;
     }
   }
 
@@ -202,7 +194,6 @@
 .slick-dots {
   display: flex;
   position: absolute;
-  left: -30rem;
   list-style-type: none;
   
   button {
