@@ -148,52 +148,19 @@ $(document).ready(function () {
     dots: true,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 10000,
     fade: true,
-    fadeSpeed: 1000,
-    cssEase: 'linear'
-  }); // const galleryBtn1 = document.querySelector(".gallery__btn1");
-  // const galleryBtn2 = document.querySelector(".gallery__btn2");
-  // const galleryBtn3 = document.querySelector(".gallery__btn3");
-  // const galleryText = document.querySelector(".gallery__element");
-  // const galleryText1 = document.querySelector(".gallery__element1");
-  // const galleryText2 = document.querySelector(".gallery__element2");
-  // const galleryText3 = document.querySelector(".gallery__element3");
-  // function text1Visible() {
-  //   galleryText1.classList.add("gallery__element--visible");
-  //   galleryBtn1.classList.add("gallery__btn--active");
-  //   galleryText2.classList.remove("gallery__element--visible");
-  //   galleryText3.classList.remove("gallery__element--visible");
-  //   galleryBtn2.classList.remove("gallery__btn--active");
-  //   galleryBtn3.classList.remove("gallery__btn--active");
-  // }
-  // function text2Visible() {
-  //   galleryText2.classList.add("gallery__element--visible");
-  //   galleryBtn2.classList.add("gallery__btn--active");
-  //   galleryText1.classList.remove("gallery__element--visible");
-  //   galleryText3.classList.remove("gallery__element--visible");
-  //   galleryBtn1.classList.remove("gallery__btn--active");
-  //   galleryBtn3.classList.remove("gallery__btn--active");
-  // }
-  // function text3Visible() {
-  //   galleryText3.classList.add("gallery__element--visible");
-  //   galleryBtn3.classList.add("gallery__btn--active");
-  //   galleryText1.classList.remove("gallery__element--visible");
-  //   galleryText2.classList.remove("gallery__element--visible");
-  //   galleryBtn1.classList.remove("gallery__btn--active");
-  //   galleryBtn2.classList.remove("gallery__btn--active");
-  // }
-  // galleryBtn1.addEventListener("click", text1Visible);
-  // galleryBtn2.addEventListener("click", text2Visible);
-  // galleryBtn3.addEventListener("click", text3Visible);
-  // contact form
+    fadeSpeed: 10000,
+    cssEase: "ease-in-out"
+  }); // contact form
 
   var inputEmail = document.querySelector(".contact__email");
   var inputMsg = document.querySelector(".contact__msg");
   var sendBtn = document.querySelector(".contact__btn");
   var emailInfo = document.querySelector(".contact__email-info");
-  var msgInfo = document.querySelector(".contact__msg-info");
-  var sentInfo = document.querySelector(".contact__sent-info");
+  var msgInfo = document.querySelector(".contact__msg-info"); // const sentInfo = document.querySelector(".contact__sent-info");
+
+  var infoIcon = document.querySelector(".contact__sent-info__icon");
 
   function emailValid(e) {
     if (validateEmail(inputEmail.value)) {
@@ -216,18 +183,20 @@ $(document).ready(function () {
   function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
-  }
+  } // sendBtn.addEventListener("click", emailValid, msgValid, () => {
+  //   infoIcon.classList.remove("contact__sent-info--disabled");
+  // });
+  // sendBtn.addEventListener("click", msgValid);
+  //contact form info icon-exit
+  // function displayInfo() {
+  //   if(emailValid() && msgValid() && sendBtn.clicked) {
+  //     // displayWindow.classList.remove("contact__sent-info--disabled");
+  //     console.log("dupa");
+  //   }
+  // }
+  // sendBtn.addEventListener("click", displayInfo);
+  //go-up button
 
-  sendBtn.addEventListener("click", emailValid);
-  sendBtn.addEventListener("click", msgValid); //contact form info icon-exit
-
-  var exitIcon = document.querySelector(".contact__sent-info__icon");
-
-  function exitInfo() {
-    sentInfo.classList.add("contact__sent-info--disabled");
-  }
-
-  exitIcon.addEventListener("click", exitInfo); //go-up button
 
   var goUpBtn = document.querySelector(".info__up-icon");
   goUpBtn.addEventListener("click", function () {

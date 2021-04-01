@@ -114,15 +114,13 @@
       right: 0.5rem;
       padding: 1rem;
       cursor: pointer;
-      transition: all 0.7s ease-in-out;
+      transition: color 0.7s ease-in-out, transform 0.7s ease-in-out;
       transform: rotate(-90deg);
       transform-origin: center;
 
       &:hover {
         color: $blue-color;
-        transition: all 0.7s ease-in-out;
         transform: rotate(90deg);
-        transform-origin: center;
       }
     }
 

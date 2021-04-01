@@ -37,10 +37,11 @@ $(document).ready(function () {
     dots: true,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 10000,
     fade: true,
-    fadeSpeed: 1000,
-    cssEase: "linear",
+    fadeSpeed: 10000,
+    cssEase: "ease-in-out",
+    
   });
 
   // contact form
@@ -52,7 +53,8 @@ $(document).ready(function () {
   const emailInfo = document.querySelector(".contact__email-info");
   const msgInfo = document.querySelector(".contact__msg-info");
 
-  const sentInfo = document.querySelector(".contact__sent-info");
+  // const sentInfo = document.querySelector(".contact__sent-info");
+  const infoIcon = document.querySelector(".contact__sent-info__icon");
 
   function emailValid(e) {
     if (validateEmail(inputEmail.value)) {
@@ -75,18 +77,23 @@ $(document).ready(function () {
     return re.test(email);
   }
 
-  sendBtn.addEventListener("click", emailValid);
-  sendBtn.addEventListener("click", msgValid);
+  // sendBtn.addEventListener("click", emailValid, msgValid, () => {
+  //   infoIcon.classList.remove("contact__sent-info--disabled");
+  // });
+  // sendBtn.addEventListener("click", msgValid);
 
   //contact form info icon-exit
 
-  const exitIcon = document.querySelector(".contact__sent-info__icon");
+  
 
-  function exitInfo() {
-    sentInfo.classList.add("contact__sent-info--disabled");
-  }
+  // function displayInfo() {
+  //   if(emailValid() && msgValid() && sendBtn.clicked) {
+  //     // displayWindow.classList.remove("contact__sent-info--disabled");
+  //     console.log("dupa");
+  //   }
+  // }
 
-  exitIcon.addEventListener("click", exitInfo);
+  // sendBtn.addEventListener("click", displayInfo);
 
   //go-up button
 
