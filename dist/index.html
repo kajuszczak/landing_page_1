@@ -23,19 +23,23 @@
     />
   </head>
   <body>
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor__pointer"></div>
+
     <!-- Header with navigation menu -->
     <header class="heading container">
       <div class="heading__title">
-        <a class="heading__title" href="index.html"> PATRYCJA KOŁACZYŃSKA </a>
+        <a class="heading__title hover" href="index.html"> PATRYCJA KOŁACZYŃSKA </a>
       </div>
       <nav class="heading__navigation-container">
         <ul class="heading__navigation">
-          <li><a class="heading__link" href="#about-me">O MNIE</a></li>
-          <li><a class="heading__link" href="#gallery">PROJEKTY</a></li>
-          <li><a class="heading__link" href="#contact">NAPISZ DO MNIE</a></li>
+          <li><a class="heading__link hover" href="#about-me">O MNIE</a></li>
+          <li><a class="heading__link hover" href="#gallery">PROJEKTY</a></li>
+          <li><a class="heading__link hover" href="#contact">NAPISZ DO MNIE</a></li>
         </ul>
-        <div class="heading__trigger-el">
-          <span class="heading__icon"></span>
+        <div class="heading__trigger-el hover">
+          <span class="heading__icon hover"></span>
         </div>
       </nav>
       <h1 class="heading__paragraph">
@@ -123,20 +127,18 @@
     <section class="gallery container" id="gallery">
       <ul class="gallery__photo">
         <li class="gallery__photo-container">
-        
-            <div class="gallery__text-elements">
-              <h4 class="gallery__title">Centrum Sportowe w Łodzi</h4>
-              <h5 class="gallery__project-type">
-                projekt budynku użyteczności publicznej
-              </h5>
-              <p class="gallery__description">
-                Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff
-                mace skywalker windu yavin. Zabrak palpatine mon kenobi darth
-                mothma skywalker dantooine. Wicket solo solo bespin hoth
-                antilles.
-              </p>
-            </div>
-        
+          <div class="gallery__text-elements">
+            <h4 class="gallery__title">Centrum Sportowe w Łodzi</h4>
+            <h5 class="gallery__project-type">
+              projekt budynku użyteczności publicznej
+            </h5>
+            <p class="gallery__description">
+              Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff
+              mace skywalker windu yavin. Zabrak palpatine mon kenobi darth
+              mothma skywalker dantooine. Wicket solo solo bespin hoth antilles.
+            </p>
+          </div>
+
           <picture>
             <source srcset="./img/architecture1.webp" type="image/webp" />
             <source srcset="./img/architecture1.jpg" type="image/jpeg" />
@@ -148,21 +150,18 @@
           </picture>
         </li>
         <li class="gallery__photo-container">
-        
-            <div class="gallery__text-elements">
-              <h4 class="gallery__title">Plac miejski w Łowiczu</h4>
-              <h5 class="gallery__project-type">
-                projekt zagospodarowania terenu publicznego
-              </h5>
-              <p class="gallery__description">
-                Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff
-                mace skywalker windu yavin. Zabrak palpatine mon kenobi darth
-                mothma skywalker dantooine. Wicket solo solo bespin hoth
-                antilles.
-              </p>
-            </div>
-          
-        
+          <div class="gallery__text-elements">
+            <h4 class="gallery__title">Plac miejski w Łowiczu</h4>
+            <h5 class="gallery__project-type">
+              projekt zagospodarowania terenu publicznego
+            </h5>
+            <p class="gallery__description">
+              Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff
+              mace skywalker windu yavin. Zabrak palpatine mon kenobi darth
+              mothma skywalker dantooine. Wicket solo solo bespin hoth antilles.
+            </p>
+          </div>
+
           <picture>
             <source srcset="./img/architecture2.webp" type="image/webp" />
             <source srcset="./img/architecture2.jpg" type="image/jpeg" />
@@ -174,19 +173,18 @@
           </picture>
         </li>
         <li class="gallery__photo-container">
-            <div class="gallery__text-elements">
-              <h4 class="gallery__title">Biblioteka miejska w Łodzi</h4>
-              <h5 class="gallery__project-type">
-                projekt budynku użyteczności publicznej
-              </h5>
-              <p class="gallery__description">
-                Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff
-                mace skywalker windu yavin. Zabrak palpatine mon kenobi darth
-                mothma skywalker dantooine. Wicket solo solo bespin hoth
-                antilles.
-              </p>
-            </div>
-        
+          <div class="gallery__text-elements">
+            <h4 class="gallery__title">Biblioteka miejska w Łodzi</h4>
+            <h5 class="gallery__project-type">
+              projekt budynku użyteczności publicznej
+            </h5>
+            <p class="gallery__description">
+              Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff
+              mace skywalker windu yavin. Zabrak palpatine mon kenobi darth
+              mothma skywalker dantooine. Wicket solo solo bespin hoth antilles.
+            </p>
+          </div>
+
           <picture>
             <source srcset="./img/architecture3.webp" type="image/webp" />
             <source srcset="./img/architecture3.jpg" type="image/jpeg" />
@@ -202,7 +200,7 @@
 
     <!-- Contact form -->
     <section class="contact" id="contact">
-      <div class="contact__sent-info">
+      <div class="contact__sent-info--disabled">
         <ion-icon
           class="contact__sent-info__icon"
           name="close-outline"
@@ -210,29 +208,37 @@
         <span class="contact__sent-info__p">Wiadomość została wysłana</span>
       </div>
       <h6 class="contact__heading">Napisz do mnie</h6>
+
       <form
+        action="https://formsubmit.co/test.page0987@gmail.com"
         class="contact__form"
         method="post"
         action="send"
         enctype="multipart/form-data"
       >
         <input
-          class="contact__email"
+          class="contact__email hover"
           type="email"
+          name="email"
           placeholder="wpisz swój adres email"
           required
         />
         <p class="contact__email-info"></p>
         <textarea
-          class="contact__msg"
+          class="contact__msg hover"
           name="message"
           rows="4"
           cols="50"
           placeholder="wpisz treść wiadomości"
           required
         ></textarea>
+        <input
+          type="hidden"
+          name="_next"
+          value="http://localhost:3000/after_msg.html"
+        />
         <p class="contact__msg-info"></p>
-        <button class="contact__btn" type="submit" value="submit">
+        <button class="contact__btn hover" type="submit" value="submit">
           Wyślij
         </button>
       </form>
@@ -242,11 +248,11 @@
     <footer>
       <section class="info container">
         <div class="info__contact">
-          <a href="mailto:adres@email.pl" class="info__email">adres@email.pl</a>
+          <a href="mailto:adres@email.pl" class="info__email hover">adres@email.pl</a>
           <h6 class="info__phone-number">+48 000 111 222</h6>
         </div>
         <div class="info__go-up">
-          <ion-icon name="chevron-up-outline" class="info__up-icon"></ion-icon>
+          <ion-icon name="chevron-up-outline" class="info__up-icon hover"></ion-icon>
         </div>
         <ul class="info__social-media">
           <li>
@@ -255,7 +261,7 @@
               target="_blank"
               rel="noopener noreferrer"
               ><ion-icon
-                class="info__social-media-icon"
+                class="info__social-media-icon hover"
                 name="logo-linkedin"
               ></ion-icon
             ></a>
@@ -266,7 +272,7 @@
               target="_blank"
               rel="noopener noreferrer"
               ><ion-icon
-                class="info__social-media-icon"
+                class="info__social-media-icon hover"
                 name="logo-facebook"
               ></ion-icon
             ></a>
@@ -277,7 +283,7 @@
               target="_blank"
               rel="noopener noreferrer"
               ><ion-icon
-                class="info__social-media-icon"
+                class="info__social-media-icon hover"
                 name="logo-instagram"
               ></ion-icon
             ></a>
@@ -306,6 +312,6 @@
       type="text/javascript"
       src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"
     ></script>
-    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

@@ -13,11 +13,54 @@ $(document).ready(function () {
     };
   };
 
+
+  // cursor
+  const cursor = document.querySelector(".cursor");
+  const pointer = document.querySelector(".cursor__pointer");
+
+  const hoverPointer = document.querySelectorAll(".hover");
+
+  window.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.pageX + "px";
+    cursor.style.top = e.pageY + "px";
+    cursor.setAttribute("data-fromTop", cursor.offsetTop - scrollY);
+
+    pointer.style.left = e.pageX + "px";
+    pointer.style.top = e.pageY + "px";
+    pointer.setAttribute("data-fromTop", cursor.offsetTop - scrollY);
+  });
+
+  window.addEventListener("scroll", () => {
+    const fromTop = cursor.getAttribute("data-fromTop");
+    cursor.style.top = scrollY + parseInt(fromTop) + "px";
+    
+    // const fromTop = cursor.getAttribute("data-fromTop");
+    pointer.style.top = scrollY + parseInt(fromTop) + "px";
+  });
+
+  window.addEventListener("click", () => {
+    if (cursor.classList.contains("click")) {
+      cursor.classList.remove("click");
+      void cursor.offsetWidth;
+      cursor.classList.add("click");
+    } else {
+      cursor.classList.add("click");
+    }
+  });
+
+  hoverPointer.forEach(link => {
+    link.addEventListener("mouseover", () => {
+      pointer.classList.add("cursor__pointer--active-hover");
+    });
+    link.addEventListener("mouseleave", () => {
+      pointer.classList.remove("cursor__pointer--active-hover");
+    });
+  });
+
   // nested menu
 
   const nestedMenu = document.querySelector(".heading__navigation");
   const menuTriggerEl = document.querySelector(".heading__trigger-el");
-  const headingTitle = document.querySelector(".heading__title");
 
   const menuOnScroll = debounce(function () {
     nestedMenu.classList.remove("heading__navigation--open");
@@ -46,52 +89,42 @@ $(document).ready(function () {
 
   // contact form
 
-  const inputEmail = document.querySelector(".contact__email");
-  const inputMsg = document.querySelector(".contact__msg");
-  const sendBtn = document.querySelector(".contact__btn");
+  // const inputEmail = document.querySelector(".contact__email");
+  // const inputMsg = document.querySelector(".contact__msg");
+  // const sendBtn = document.querySelector(".contact__btn");
 
-  const emailInfo = document.querySelector(".contact__email-info");
-  const msgInfo = document.querySelector(".contact__msg-info");
+  // const emailInfo = document.querySelector(".contact__email-info");
+  // const msgInfo = document.querySelector(".contact__msg-info");
 
   // const sentInfo = document.querySelector(".contact__sent-info");
-  const infoIcon = document.querySelector(".contact__sent-info__icon");
-
-  function emailValid(e) {
-    if (validateEmail(inputEmail.value)) {
-      emailInfo.textContent = "";
-    } else {
-      emailInfo.textContent = "pole nie może być puste";
-    }
-    e.preventDefault();
-  }
-
-  function msgValid(e) {
-    if (inputMsg.value === "") {
-      msgInfo.textContent = "pole nie może być puste";
-    }
-    e.preventDefault();
-  }
-
-  function validateEmail(email) {
-    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-  }
-
-  // sendBtn.addEventListener("click", emailValid, msgValid, () => {
-  //   infoIcon.classList.remove("contact__sent-info--disabled");
-  // });
-  // sendBtn.addEventListener("click", msgValid);
-
-  //contact form info icon-exit
+  // const infoIcon = document.querySelector(".contact__sent-info__icon");
 
   
 
-  // function displayInfo() {
-  //   if(emailValid() && msgValid() && sendBtn.clicked) {
-  //     // displayWindow.classList.remove("contact__sent-info--disabled");
-  //     console.log("dupa");
+  // function emailValid(e) {
+  //   if (validateEmail(inputEmail.value)) {
+  //     emailInfo.textContent = "";
+  //   } else {
+  //     emailInfo.textContent = "pole nie może być puste";
   //   }
+  //   e.preventDefault();
   // }
+
+  // function msgValid(e) {
+  //   if (inputMsg.value === "") {
+  //     msgInfo.textContent = "pole nie może być puste";
+  //   }
+  //   e.preventDefault();
+  // }
+
+  // function validateEmail(email) {
+  //   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  //   return re.test(email);
+  // }
+
+  
+  //contact form info icon-exit
+
 
   // sendBtn.addEventListener("click", displayInfo);
 
