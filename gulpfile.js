@@ -101,10 +101,6 @@ function css() {
             }))
         
         .pipe(cleanCss())
-        .pipe(
-            rename({
-                extname: '.min.css'
-            }))
         .pipe(dest(path.build.css))
         .pipe(browserSync.stream())
 }
