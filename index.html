@@ -16,21 +16,30 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
+    />
   </head>
   <body>
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <div class="cursor__pointer"></div>
+
     <!-- Header with navigation menu -->
     <header class="heading container">
       <div class="heading__title">
-        <a class="heading__title" href="index.html"> PATRYCJA KOŁACZYŃSKA </a>
+        <a class="heading__title hover" href="index.html"> PATRYCJA KOŁACZYŃSKA </a>
       </div>
       <nav class="heading__navigation-container">
         <ul class="heading__navigation">
-          <li><a class="heading__link" href="#about-me">O MNIE</a></li>
-          <li><a class="heading__link" href="#gallery">PROJEKTY</a></li>
-          <li><a class="heading__link" href="#contact">NAPISZ DO MNIE</a></li>
+          <li><a class="heading__link hover" href="#about-me">O MNIE</a></li>
+          <li><a class="heading__link hover" href="#gallery">PROJEKTY</a></li>
+          <li><a class="heading__link hover" href="#contact">NAPISZ DO MNIE</a></li>
         </ul>
-        <div class="heading__trigger-el">
-          <ion-icon name="menu-outline"></ion-icon>
+        <div class="heading__trigger-el hover">
+          <span class="heading__icon hover"></span>
         </div>
       </nav>
       <h1 class="heading__paragraph">
@@ -116,63 +125,20 @@
 
     <!-- Gallery of projects section -->
     <section class="gallery container" id="gallery">
-      <ul class="gallery__text">
-        <li class="gallery__text-container">
-          <figure
-            class="gallery__element gallery__element--visible"
-            id="gallery__element1"
-          >
-            <figcaption class="gallery__text-elements">
-              <h4 class="gallery__title">Centrum Sportowe w Łodzi</h4>
-              <h5 class="gallery__project-type">
-                projekt budynku użyteczności publicznej
-              </h5>
-              <p class="gallery__description">
-                Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff
-                mace skywalker windu yavin. Zabrak palpatine mon kenobi darth
-                mothma skywalker dantooine. Wicket solo solo bespin hoth
-                antilles.
-              </p>
-            </figcaption>
-          </figure>
-        </li>
-
-        <li class="gallery__text-container">
-          <figure class="gallery__element" id="gallery__element2">
-            <figcaption class="gallery__text-elements">
-              <h4 class="gallery__title">Plac miejski w Łowiczu</h4>
-              <h5 class="gallery__project-type">
-                projekt zagospodarowania terenu publicznego
-              </h5>
-              <p class="gallery__description">
-                Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff
-                mace skywalker windu yavin. Zabrak palpatine mon kenobi darth
-                mothma skywalker dantooine. Wicket solo solo bespin hoth
-                antilles.
-              </p>
-            </figcaption>
-          </figure>
-        </li>
-
-        <li class="gallery__text-container">
-          <figure class="gallery__element" id="gallery__element3">
-            <figcaption class="gallery__text-elements">
-              <h4 class="gallery__title">Biblioteka miejska w Łodzi</h4>
-              <h5 class="gallery__project-type">
-                projekt budynku użyteczności publicznej
-              </h5>
-              <p class="gallery__description">
-                Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff
-                mace skywalker windu yavin. Zabrak palpatine mon kenobi darth
-                mothma skywalker dantooine. Wicket solo solo bespin hoth
-                antilles.
-              </p>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
       <ul class="gallery__photo">
         <li class="gallery__photo-container">
+          <div class="gallery__text-elements">
+            <h4 class="gallery__title">Centrum Sportowe w Łodzi</h4>
+            <h5 class="gallery__project-type">
+              projekt budynku użyteczności publicznej
+            </h5>
+            <p class="gallery__description">
+              Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff
+              mace skywalker windu yavin. Zabrak palpatine mon kenobi darth
+              mothma skywalker dantooine. Wicket solo solo bespin hoth antilles.
+            </p>
+          </div>
+
           <picture>
             <source srcset="./img/architecture1.webp" type="image/webp" />
             <source srcset="./img/architecture1.jpg" type="image/jpeg" />
@@ -184,6 +150,18 @@
           </picture>
         </li>
         <li class="gallery__photo-container">
+          <div class="gallery__text-elements">
+            <h4 class="gallery__title">Plac miejski w Łowiczu</h4>
+            <h5 class="gallery__project-type">
+              projekt zagospodarowania terenu publicznego
+            </h5>
+            <p class="gallery__description">
+              Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff
+              mace skywalker windu yavin. Zabrak palpatine mon kenobi darth
+              mothma skywalker dantooine. Wicket solo solo bespin hoth antilles.
+            </p>
+          </div>
+
           <picture>
             <source srcset="./img/architecture2.webp" type="image/webp" />
             <source srcset="./img/architecture2.jpg" type="image/jpeg" />
@@ -195,6 +173,18 @@
           </picture>
         </li>
         <li class="gallery__photo-container">
+          <div class="gallery__text-elements">
+            <h4 class="gallery__title">Biblioteka miejska w Łodzi</h4>
+            <h5 class="gallery__project-type">
+              projekt budynku użyteczności publicznej
+            </h5>
+            <p class="gallery__description">
+              Lucas ipsum dolor sit amet organa sidious mace jade kenobi moff
+              mace skywalker windu yavin. Zabrak palpatine mon kenobi darth
+              mothma skywalker dantooine. Wicket solo solo bespin hoth antilles.
+            </p>
+          </div>
+
           <picture>
             <source srcset="./img/architecture3.webp" type="image/webp" />
             <source srcset="./img/architecture3.jpg" type="image/jpeg" />
@@ -206,40 +196,51 @@
           </picture>
         </li>
       </ul>
-      <div class="gallery__buttons">
-        <ul class="gallery__btn-container">
-          <button class="gallery__btn gallery__btn1" id="gallery__btn1">
-            <a href="#gallery__element1"></a>
-          </button>
-          <button class="gallery__btn gallery__btn2" id="gallery__btn2">
-            <a href="#gallery__element2"></a>
-          </button>
-          <button class="gallery__btn gallery__btn3" id="gallery__btn3">
-            <a href="#gallery__element3"></a>
-          </button>
-        </ul>
-      </div>
     </section>
 
     <!-- Contact form -->
     <section class="contact" id="contact">
+      <div class="contact__sent-info--disabled">
+        <ion-icon
+          class="contact__sent-info__icon"
+          name="close-outline"
+        ></ion-icon>
+        <span class="contact__sent-info__p">Wiadomość została wysłana</span>
+      </div>
       <h6 class="contact__heading">Napisz do mnie</h6>
-      <form class="contact__form">
+
+      <form
+        action="https://formsubmit.co/test.page0987@gmail.com"
+        class="contact__form"
+        method="post"
+        action="send"
+        enctype="multipart/form-data"
+      >
         <input
-          class="contact__email"
+          class="contact__email hover"
           type="email"
+          name="email"
           placeholder="wpisz swój adres email"
+          required
         />
         <p class="contact__email-info"></p>
         <textarea
-          class="contact__msg"
+          class="contact__msg hover"
           name="message"
           rows="4"
           cols="50"
           placeholder="wpisz treść wiadomości"
+          required
         ></textarea>
-        <button class="contact__btn">Wyślij</button>
+        <input
+          type="hidden"
+          name="_next"
+          value="http://localhost:3000/after_msg.html"
+        />
         <p class="contact__msg-info"></p>
+        <button class="contact__btn hover" type="submit" value="submit">
+          Wyślij
+        </button>
       </form>
     </section>
 
@@ -247,11 +248,11 @@
     <footer>
       <section class="info container">
         <div class="info__contact">
-          <a href="mailto:adres@email.pl" class="info__email">adres@email.pl</a>
+          <a href="mailto:adres@email.pl" class="info__email hover">adres@email.pl</a>
           <h6 class="info__phone-number">+48 000 111 222</h6>
         </div>
         <div class="info__go-up">
-          <ion-icon name="chevron-up-outline" class="info__up-icon"></ion-icon>
+          <ion-icon name="chevron-up-outline" class="info__up-icon hover"></ion-icon>
         </div>
         <ul class="info__social-media">
           <li>
@@ -260,7 +261,7 @@
               target="_blank"
               rel="noopener noreferrer"
               ><ion-icon
-                class="info__social-media-icon"
+                class="info__social-media-icon hover"
                 name="logo-linkedin"
               ></ion-icon
             ></a>
@@ -271,7 +272,7 @@
               target="_blank"
               rel="noopener noreferrer"
               ><ion-icon
-                class="info__social-media-icon"
+                class="info__social-media-icon hover"
                 name="logo-facebook"
               ></ion-icon
             ></a>
@@ -282,7 +283,7 @@
               target="_blank"
               rel="noopener noreferrer"
               ><ion-icon
-                class="info__social-media-icon"
+                class="info__social-media-icon hover"
                 name="logo-instagram"
               ></ion-icon
             ></a>
@@ -298,6 +299,19 @@
       nomodule=""
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="js/script.js"></script>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

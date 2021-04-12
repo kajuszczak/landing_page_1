@@ -15,6 +15,13 @@
     justify-content: center;
     width: 20rem;
     height: 2rem;
+    margin-top: 0;
+    transition: margin-bottom 0.3s ease-in-out;
+
+    &:hover {
+      margin-bottom: 1.5rem;
+      transition: margin-bottom 0.3s ease-in-out;
+    }
 
     @media (max-width: $mobile-size) {
       width: 10rem;
@@ -24,7 +31,6 @@
   &__up-icon {
     font-size: 3rem;
     color: $active-grey-btn-color;
-    cursor: pointer;
 
     &:hover {
       color: $blue-color;

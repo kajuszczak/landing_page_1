@@ -28,10 +28,15 @@
 
     @media (max-width: $mid-size) {
       width: 38rem;
+      top: 0;
+    }
+
+    @media (max-width: $tablet-size) {
+      top: 200px;
     }
 
     @media (max-width: $mobile-size) {
-      top: 330px;
+      top: 0;
     }
   }
 
@@ -102,18 +107,11 @@
     clip-path: circle(78.4% at 95% 38%);
     z-index: 1;
 
-    &:hover {
-      clip-path: none;
-      transition: all 10s ease-in-out;
-      transition-delay: 20s;
-    }
-
     @media (max-width: $tablet-size) {
       left: 46%;
     }
 
     @media (max-width: $mobile-size) {
-      top: 320px;
       height: 20rem;
       width: auto;
       left: 58%;
@@ -143,7 +141,6 @@
     font-weight: $light;
     color: $blue-color;
     opacity: 0.8;
-    cursor: default;
     display: inline-block;
     padding-left: 100%;
     animation: marquee 40s linear infinite;
@@ -164,7 +161,6 @@
     font-weight: $light;
     color: $blue-color;
     opacity: 0.8;
-    cursor: default;
   }
 
   @media (max-width: $tablet-size) {

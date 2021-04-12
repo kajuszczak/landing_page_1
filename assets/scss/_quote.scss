@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   background-color: $background-section-color;
+  float: left;
 
   @media (max-width: $mobile-size) {
     height: 20rem;
@@ -14,12 +15,12 @@
     font-family: $serif;
     font-size: 2.5rem;
     padding-bottom: 4rem;
+    transition: all 0.5s ease-in-out;
 
     &:hover {
       color: $blue-color;
       font-style: italic;
-      transition: all 0.2s ease-in-out;
-      cursor: default;
+      transition: all 0.5s ease-in-out;
     }
 
     @media (max-width: $tablet-size) {
@@ -46,3 +47,4 @@
     }
   }
 }
+

@@ -1,7 +1,7 @@
 {
-  "name": "my-gulp-webpack-bundle",
+  "name": " Project of landing page ",
   "version": "1.0.0",
-  "description": "gulp, webpack",
+  "description": "Landing page / portfolio for architect",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "gulp",
     "webpack"
   ],
-  "author": "Andrey Remarkov <remarkov.andrey@gmail.com>",
+  "author": "Karolina Juszczak <karolinajuszczak98@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.10.2",
@@ -26,19 +26,14 @@
     "gulp-babel": "^8.0.0-beta.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-file-include": "^2.2.2",
-    "gulp-fonter": "^0.3.0",
-    "gulp-group-css-media-queries": "^1.2.2",
     "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
-    "gulp-svg-sprite": "^1.5.0",
-    "gulp-ttf2woff": "^1.1.1",
-    "gulp-ttf2woff2": "^3.0.0",
     "gulp-uglify-es": "^2.0.0",
-    "gulp-webp": "^4.0.1",
-    "gulp-webp-css": "^1.1.0",
-    "gulp-webp-html": "^1.0.2",
     "webpack": "^4.43.0",
     "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
   }
 }

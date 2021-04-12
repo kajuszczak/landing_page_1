@@ -6,12 +6,11 @@
   justify-content: space-between;
   background-image: url(/img/background-header.webp);
   background-size: cover;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
   align-items: center;
   flex-wrap: wrap;
   background-attachment: fixed;
-  align-items: flex-end;
 
   @media (max-width: $mid-size) {
     align-items: center;
@@ -32,11 +31,13 @@
     font-family: $sans-serif;
     font-size: 2rem;
     color: $black;
-    cursor: pointer;
     font-weight: $normal;
-
+    border-bottom: 2px solid $blue-color;
+    border-spacing: 2px;
+    
     &:hover {
       color: $blue-color;
+      border-bottom: none;
       transition: all 0.3s ease-in-out;
     }
 
@@ -55,20 +56,72 @@
 
   &__navigation-container {
     display: flex;
-  }
-
-  &__navigation {
-    display: flex;
-    justify-content: space-between;
+    z-index: 2;
   }
 
   &__trigger-el {
-    display: none;
+    position: fixed;
+    opacity: 0.6;
+    width: 40px;
+    height: 40px;
+  }
 
-    @media (max-width: $tablet-size) {
+  &__icon {
+    display: flex;
+    background-color: $black;
+    transition: background-color 0.3s ease-in-out;
+    height: 2px;
+    width: 100%;
+    position: relative;
+
+    &::before, &::after {
+      content: "";
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: -8px;
+      background-color: $black;
+      transition: all 0.3s ease-in-out;
+      left: 0;
+    }
+
+    &::after {
+      top: 8px;
+      right: 0;
+      left: auto;
+    }
+  }
+
+  &__navigation {
+    display: none;
+    width: 40rem;
+    justify-content: space-between;
+    
+
+    &--open {
       display: flex;
-      cursor: pointer;
-      font-size: 2rem;
+      position: fixed;
+      left: 48%;
+      top: 5rem;
+
+
+      & + .heading__trigger-el .heading__icon {
+        background-color: transparent;
+        
+        &::before, &::after {
+          transform: rotate(45deg);
+          width: 100%;
+          top: 0;
+          left: 0;
+          right: auto;
+          transform-origin: center;
+          background-color: $blue-color;
+        }
+        
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
     }
   }
 
@@ -77,7 +130,6 @@
     font-size: 1.5rem;
     color: $black;
     font-weight: $normal;
-    display: block;
     text-align: center;
     min-width: 8rem;
     margin-left: 3.5rem;
@@ -101,9 +153,8 @@
     font-size: 6rem;
     font-family: $serif;
     font-weight: $normal;
-    padding-top: 7.5rem;
+    padding-top: 12rem;
     line-height: 1.05;
-    cursor: default;
 
     @media (max-width: $tablet-size) {
       font-size: 4rem;
@@ -121,6 +172,6 @@
   }
   &__active:hover {
     color: $blue-color;
-    transition: all 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
   }
 }
