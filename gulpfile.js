@@ -1,4 +1,4 @@
-const distDir = "./dist/"
+const distDir = "./docs"
 const srcDir = '.'
 
 const path = {
