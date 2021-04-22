@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: center;
   background-color: $background-section-color;
-  float: left;
 
   @media (max-width: $mobile-size) {
     height: 20rem;

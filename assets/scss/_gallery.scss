@@ -114,6 +114,8 @@
   }
 
   .slick-active {
+    outline: none;
+
     .gallery__text-elements {
       transform: translateX(0);
       opacity: 1;

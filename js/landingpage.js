@@ -20,15 +20,16 @@ $(document).ready(function () {
 
   const hoverPointer = document.querySelectorAll(".hover");
 
-  window.addEventListener("mousemove", (e) => {
-    cursor.style.left = e.pageX + "px";
-    cursor.style.top = e.pageY + "px";
-    cursor.setAttribute("data-fromTop", cursor.offsetTop - scrollY);
-
-    pointer.style.left = e.pageX + "px";
-    pointer.style.top = e.pageY + "px";
-    pointer.setAttribute("data-fromTop", cursor.offsetTop - scrollY);
+  window.addEventListener("mousemove", (event) => {
+    setCursorStyle(cursor, event);
+    setCursorStyle(pointer, event);
   });
+
+  function setCursorStyle(mousePointer, event) {
+    mousePointer.style.left = event.pageX + "px";
+    mousePointer.style.top = event.pageY + "px";
+    mousePointer.setAttribute("data-fromTop", mousePointer.offsetTop - scrollY);
+  }
 
   window.addEventListener("scroll", () => {
     const fromTop = cursor.getAttribute("data-fromTop");
@@ -83,9 +84,8 @@ $(document).ready(function () {
     fade: true,
     fadeSpeed: 10000,
     cssEase: "ease-in-out",
-    
   });
-
+  
   //go-up button
 
   const goUpBtn = document.querySelector(".info__up-icon");

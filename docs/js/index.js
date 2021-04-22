@@ -143,14 +143,17 @@ $(document).ready(function () {
   var cursor = document.querySelector(".cursor");
   var pointer = document.querySelector(".cursor__pointer");
   var hoverPointer = document.querySelectorAll(".hover");
-  window.addEventListener("mousemove", function (e) {
-    cursor.style.left = e.pageX + "px";
-    cursor.style.top = e.pageY + "px";
-    cursor.setAttribute("data-fromTop", cursor.offsetTop - scrollY);
-    pointer.style.left = e.pageX + "px";
-    pointer.style.top = e.pageY + "px";
-    pointer.setAttribute("data-fromTop", cursor.offsetTop - scrollY);
+  window.addEventListener("mousemove", function (event) {
+    setCursorStyle(cursor, event);
+    setCursorStyle(pointer, event);
   });
+
+  function setCursorStyle(mousePointer, event) {
+    mousePointer.style.left = event.pageX + "px";
+    mousePointer.style.top = event.pageY + "px";
+    mousePointer.setAttribute("data-fromTop", mousePointer.offsetTop - scrollY);
+  }
+
   window.addEventListener("scroll", function () {
     var fromTop = cursor.getAttribute("data-fromTop");
     cursor.style.top = scrollY + parseInt(fromTop) + "px";
